@@ -3,9 +3,11 @@ import {
     Container,
     LeftContainer,
     LeftContainerHeading,
-    LeftContainerButton,
     RightContainer,
-    RightContainerImage
+    RightContainerImage,
+    CtaButtonContainer,
+    LeftCtaButton,
+    TopLittleCircle,
 } from "./style";
 
 import orderImage from '../../assets/images/web03-min.png'
@@ -18,9 +20,12 @@ const OrderCta = () => {
                     <LeftContainerHeading>
                         Video kurslarimizni uyingizgacha bepul yetkazib beramiz!
                     </LeftContainerHeading>
-                    <LeftContainerButton>
-                        buyurtma berish
-                    </LeftContainerButton>
+                    <CtaButtonContainer>
+                        <TopLittleCircle/>
+                        <LeftCtaButton>
+                            buyurtma berish
+                        </LeftCtaButton>
+                    </CtaButtonContainer>
                 </LeftContainer>
                 <RightContainer>
                     <RightContainerImage src={orderImage}/>

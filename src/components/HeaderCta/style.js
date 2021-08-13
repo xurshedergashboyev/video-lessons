@@ -1,5 +1,20 @@
 import styled from 'styled-components'
 import web from '../../assets/images/web-.jpg'
+import {keyframes} from "styled-components";
+
+const ButtonAnimation = keyframes `
+  0% {
+    transform: scale(1);
+    box-shadow: 0 31px 41px 0 rgba(0, 0, 0, 0.3);
+
+  } 50% {
+    transform: scale(1.1);
+        box-shadow: 0 31px 41px 0 rgba(0, 0, 0, 0.8);
+      }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -43,10 +58,40 @@ export const CtaDesc = styled.p`
   color: #fff;
 `;
 
-export const CtaButton = styled.button`
-  position: relative;
+export const CtaButtonContainer = styled.div`
   width: 250px;
   height: 50px;
+  display: flex;
+  z-index: 5;
+  position: relative;
+  margin-top: 50px;
+`;
+
+export const TopLittleCircle = styled.div`
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #97d0ee;
+  top: -50%;
+  right: -10%;
+  z-index: 1;
+`;
+
+export const BottomLittleCircle = styled.div`
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #618bef;
+  bottom: -50%;
+  left: -10%;
+  z-index: 1;
+`;
+
+export const CtaButton = styled.button`
+  width: 100%;
+  height: 100%;
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -56,42 +101,49 @@ export const CtaButton = styled.button`
   border: none;
   color: #fff;
   padding: 20px;
-  margin-top: 50px;
   //display: flex;
   z-index: 99999;
   border-radius: 12px;
-  &:before {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #97d0ee;
-    top: -50%;
-    right: -10%;
-    //z-index: 1;
+  animation: ${ButtonAnimation} 2s linear infinite;
+  cursor: pointer;
+  &:hover {
+    .icon {
+      margin-left: 20px;
+      transition: margin-left .3s ease-in-out;
+    } 
   }
-
-  &:after {
-    position: absolute;
-    content: '';
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #618bef;
-    bottom: -50%;
-    left: -10%;
-    z-index: 1;
-  }
+  //&:before {
+  //  content: '';
+  //  position: absolute;
+  //  width: 60px;
+  //  height: 60px;
+  //  border-radius: 50%;
+  //  background-color: #97d0ee;
+  //  top: -50%;
+  //  right: -10%;
+  //  //z-index: 1;
+  //}
+  //
+  //&:after {
+  //  position: absolute;
+  //  content: '';
+  //  width: 50px;
+  //  height: 50px;
+  //  border-radius: 50%;
+  //  background-color: #618bef;
+  //  bottom: -50%;
+  //  left: -10%;
+  //  z-index: 1;
+  //}
 `;
 
-export const Icon = styled.img `
+export const Icon = styled.img`
   width: 30px;
   height: 30px;
   margin-left: 10px;
 `;
 
-export const BigCircle = styled.div `
+export const BigCircle = styled.div`
   position: absolute;
   background-color: #4b65b2;
   width: 150px;
@@ -101,7 +153,7 @@ export const BigCircle = styled.div `
   border-radius: 50%;
 `;
 
-export const MediumCircle = styled.div `
+export const MediumCircle = styled.div`
   position: absolute;
   background-color: #638df3;
   width: 100px;
@@ -111,7 +163,7 @@ export const MediumCircle = styled.div `
   border-radius: 50%;
 `;
 
-export const Rectangle = styled.div `
+export const Rectangle = styled.div`
   position: absolute;
   background-color: #4b5a81;
   opacity: .7;
@@ -147,6 +199,7 @@ export const NavbarPhoneButton = styled.button`
   right: 30px;
   cursor: pointer;
   border-radius: 12px;
+
   &:hover {
     box-shadow: 0 11px 41px 0 rgba(0, 0, 0, 0.5);
   }

@@ -14,7 +14,10 @@ import {
     BigCircle,
     MediumCircle,
     Rectangle,
-    Icon
+    Icon,
+    TopLittleCircle,
+    CtaButtonContainer,
+    BottomLittleCircle
 } from "./style";
 import Navbar from "../Navbar";
 import rightArrow from '../../assets/icons/arrow-right-circle-line.svg'
@@ -38,9 +41,13 @@ const HeaderCta = () => {
                             <CtaDesc>
                                 kasblarni biz bilan birga o'rganing!
                             </CtaDesc>
-                            <CtaButton>
-                                kurslar ro'yhati <Icon src={rightArrow} />
-                            </CtaButton>
+                            <CtaButtonContainer>
+                                <TopLittleCircle />
+                                <BottomLittleCircle />
+                                <CtaButton>
+                                    kurslar ro'yhati <Icon className="icon" src={rightArrow} />
+                                </CtaButton>
+                            </CtaButtonContainer>
                         </CtaContainer>
                     </LeftContainer>
                     <RightContainer>

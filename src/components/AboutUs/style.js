@@ -8,14 +8,17 @@ export const Wrapper = styled.div `
 
 export const Container = styled.div `
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  position: relative;
 `;
 
 export const ImageContainer = styled.div `
   height: 120vh; 
   width: auto;
   z-index: 10;
+  position: absolute;
+  left: 5%;
 `;
 
 export const Image = styled.img `
@@ -29,12 +32,14 @@ export const RightContainer = styled.div `
   justify-content: center;
   align-items: center;
   width: 70%;
+  margin-right: 50px;
 `;
 
 export const Header = styled.div `
   font-size: 100px;
   color: #2a2850;
   margin-bottom: 100px;
+  margin-top: 50px;
   position: relative;
   z-index: 5;
   &:before {
@@ -54,6 +59,7 @@ export const Facilities = styled.div `
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 `;
 
 export const FacilitiesItem = styled.div `
@@ -68,7 +74,7 @@ export const FacilitiesItemImage = styled.div `
   width: 150px;
   height: 100px;
   border-radius: 50% 0 0 50%;
-  margin-right: 10px;
+  margin-right: 20px;
   background-color: ${props => props.bgColor ? props.bgColor : '#2a2850'};
   display: flex;
   justify-content: center;
@@ -78,6 +84,7 @@ export const FacilitiesItemImage = styled.div `
 export const FacilitiesItemImg = styled.img `
   width: 70%;
   height: 70%;
+  margin-left: 10px;
 `;
 
 export const FacilitiesInfo = styled.div `
@@ -86,7 +93,7 @@ export const FacilitiesInfo = styled.div `
 `;
 
 export const FacilitiesItemName = styled.h2 `
-  font-size: 20px;
+  font-size: 25px;
   color: #2a2850;
   margin-bottom: 0;
 `;

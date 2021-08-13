@@ -14,12 +14,13 @@ import {
     FacilitiesInfo
 } from "./style";
 
-import leftImage from '../../assets/images/web02-min.png'
+import leftImage from '../../assets/images/Group 5 copy.png';
+
 import time from '../../assets/icons/fast-time.svg';
 import technicSupport from '../../assets/icons/customer-support.svg';
-import flag from '../../assets/icons/map-pin-line.svg';
-import toPro from '../../assets/icons/certificate.svg';
-import telegram from '../../assets/icons/Telegram.svg';
+import flag from '../../assets/icons/uzbekistan.svg';
+import toPro from '../../assets/icons/agile-team.svg';
+import telegram from '../../assets/icons/message.svg';
 import certificate from '../../assets/icons/certificate.svg';
 
 const data = [
