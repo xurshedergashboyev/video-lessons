@@ -41,13 +41,13 @@ export const LeftContainer = styled.div`
 
 export const CtaContainer = styled.div`
   margin-left: 100px;
-  margin-top: 150px;
+  margin-top: 10vw;
   width: 80%;
   line-height: 1;
 `;
 
 export const CtaHeader = styled.h1`
-  font-size: 90px;
+  font-size: 6vw;
   color: #fff;
   margin-bottom: 10px;
   line-height: 1;

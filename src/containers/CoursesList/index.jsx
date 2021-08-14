@@ -2,7 +2,7 @@ import {Wrapper, FirstCircle, SecondCircle, ThirdCircle} from "./style";
 import OurCourses from "../../components/OurCourses";
 import CoursesCategory from "../../components/CoursesCategory";
 import {RightLongImage} from "../../components/OurCourses/style";
-import rightImage from '../../assets/images/Layer 9 copy.png'
+import rightImage from '../../assets/images/web01.png'
 import FormSection from "../../components/FormSection";
 
 

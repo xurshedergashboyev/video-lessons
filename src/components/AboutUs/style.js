@@ -1,33 +1,32 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div `
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #fff;
 `;
 
-export const Container = styled.div `
+export const Container = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
 `;
 
-export const ImageContainer = styled.div `
-  height: 120vh; 
+export const ImageContainer = styled.div`
   width: auto;
   z-index: 10;
   position: absolute;
   left: 5%;
 `;
 
-export const Image = styled.img `
+export const Image = styled.img`
   height: 100%;
   width: 100%;
 `;
 
-export const RightContainer = styled.div `
-    display: flex;
+export const RightContainer = styled.div`
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -35,13 +34,14 @@ export const RightContainer = styled.div `
   margin-right: 50px;
 `;
 
-export const Header = styled.div `
+export const Header = styled.div`
   font-size: 100px;
   color: #2a2850;
   margin-bottom: 100px;
   margin-top: 50px;
   position: relative;
   z-index: 5;
+
   &:before {
     content: '';
     position: absolute;
@@ -55,22 +55,25 @@ export const Header = styled.div `
   }
 `;
 
-export const Facilities = styled.div `
+export const Facilities = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
 `;
 
-export const FacilitiesItem = styled.div `
+export const FacilitiesItem = styled.div`
   width: 45%;
   display: flex;
   align-items: center;
   margin-bottom: 50px;
   margin-right: 50px;
+  @media screen and (max-width: 1430px) {
+    width: 40%;
+  }
 `;
 
-export const FacilitiesItemImage = styled.div `
+export const FacilitiesItemImage = styled.div`
   width: 150px;
   height: 100px;
   border-radius: 50% 0 0 50%;
@@ -81,24 +84,24 @@ export const FacilitiesItemImage = styled.div `
   align-items: center;
 `;
 
-export const FacilitiesItemImg = styled.img `
+export const FacilitiesItemImg = styled.img`
   width: 70%;
   height: 70%;
   margin-left: 10px;
 `;
 
-export const FacilitiesInfo = styled.div `
+export const FacilitiesInfo = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const FacilitiesItemName = styled.h2 `
+export const FacilitiesItemName = styled.h2`
   font-size: 25px;
   color: #2a2850;
   margin-bottom: 0;
 `;
 
-export const FacilitiesItemDesc = styled.p `
+export const FacilitiesItemDesc = styled.p`
   font-size: 15px;
   color: #a5a5a6;
 `;

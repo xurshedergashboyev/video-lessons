@@ -46,9 +46,23 @@ export const MapContainer = styled.div `
   justify-content: center;
   width: 650px;
   height: 400px;
+  border-radius: 12px;
 `;
 
 export const Map = styled.iframe`
   width: 100%;
   height: 100%;
+  border-radius: 12px;
+`;
+
+export const Copywriting = styled.div `
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 `;
