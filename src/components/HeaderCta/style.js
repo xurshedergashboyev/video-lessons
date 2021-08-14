@@ -106,6 +106,7 @@ export const CtaButton = styled.button`
   border-radius: 12px;
   animation: ${ButtonAnimation} 2s linear infinite;
   cursor: pointer;
+  margin-left: 0;
   &:hover {
     .icon {
       margin-left: 20px;
@@ -141,6 +142,7 @@ export const Icon = styled.img`
   width: 30px;
   height: 30px;
   margin-left: 10px;
+  transition: margin-left .3s ease-in-out;
 `;
 
 export const BigCircle = styled.div`

@@ -18,7 +18,7 @@ export const NavbarItems = styled.div `
 `;
 
 export const NavbarLogo = styled.div `
-  width: 100px;
+  width: 75px;
   height: auto;
   margin-right: 50px;
   cursor: pointer;
@@ -31,7 +31,7 @@ export const NavbarLogoImg = styled.img `
 
 export const NavbarItem = styled.p `
   margin-right: 50px;
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
   cursor: pointer;
   transition: text-decoration .5s ease-in-out;

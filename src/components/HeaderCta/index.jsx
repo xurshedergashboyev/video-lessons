@@ -27,7 +27,6 @@ const HeaderCta = () => {
     return (
         <Wrapper>
             <Container>
-                {/*<Navbar />*/}
                 <FlexContainer>
                     <LeftContainer>
                         <BigCircle />

@@ -5,7 +5,7 @@ import {
     NavbarLogoImg,
     NavbarItem,
 } from "./style";
-import logo from '../../assets/images/logo vl.png';
+import logo from '../../assets/images/logo.png';
 
 const navbarData = [
     {
