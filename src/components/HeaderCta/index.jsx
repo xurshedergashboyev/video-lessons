@@ -53,7 +53,7 @@ const HeaderCta = () => {
                         <NavbarPhoneButton>
                             <NavbarPhoneIcon src={phoneIcon}/>
                             <NavbarPhoneNumber>
-                                71 555 01 20
+                                55 500 01 09
                             </NavbarPhoneNumber>
                         </NavbarPhoneButton>
                     </RightContainer>

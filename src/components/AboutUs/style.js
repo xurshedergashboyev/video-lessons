@@ -69,12 +69,15 @@ export const FacilitiesItem = styled.div`
   margin-bottom: 50px;
   margin-right: 50px;
   @media screen and (max-width: 1430px) {
-    width: 40%;
+    width: 400px;
+  }
+  @media screen and (max-width: 1300px) {
+    width: 500px;
   }
 `;
 
 export const FacilitiesItemImage = styled.div`
-  width: 150px;
+  width: 200px;
   height: 100px;
   border-radius: 50% 0 0 50%;
   margin-right: 20px;
@@ -102,6 +105,7 @@ export const FacilitiesItemName = styled.h2`
 `;
 
 export const FacilitiesItemDesc = styled.p`
-  font-size: 15px;
+  font-size: 20px;
   color: #a5a5a6;
+  margin-top: 0;
 `;

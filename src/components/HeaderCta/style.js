@@ -47,14 +47,15 @@ export const CtaContainer = styled.div`
 `;
 
 export const CtaHeader = styled.h1`
-  font-size: 6vw;
+  font-size: 5vw;
   color: #fff;
   margin-bottom: 10px;
   line-height: 1;
+  letter-spacing: 8px;
 `;
 
 export const CtaDesc = styled.p`
-  font-size: 30px;
+  font-size: 2.5vw;
   color: #fff;
 `;
 
@@ -64,7 +65,7 @@ export const CtaButtonContainer = styled.div`
   display: flex;
   z-index: 5;
   position: relative;
-  margin-top: 50px;
+  margin-top: 5vw;
 `;
 
 export const TopLittleCircle = styled.div`

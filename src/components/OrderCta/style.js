@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div `
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #4b5a81;
 `;
 
@@ -22,7 +22,7 @@ export const LeftContainer = styled.div `
 `;
 
 export const LeftContainerHeading = styled.h2 `
-  font-size: 75px;
+  font-size: 6vw;
   color: #fff;
   width: 100%;
   margin-bottom: 50px;
@@ -35,6 +35,7 @@ export const CtaButtonContainer = styled.div`
   z-index: 5;
   position: relative;
   margin-top: 50px;
+  margin-bottom: 50px;
 `;
 
 export const TopLittleCircle = styled.div`
@@ -64,9 +65,9 @@ export const LeftCtaButton = styled.button`
   z-index: 99999;
   border-radius: 12px;
   cursor: pointer;
+  transition: transform .3s ease-in-out;
   &:hover {
     transform: scale(1.05);
-    transition: transform .3s ease-in-out;
   }
 `
 // export const LeftContainerButton = styled.button`

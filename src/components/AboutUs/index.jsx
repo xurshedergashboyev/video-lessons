@@ -28,39 +28,39 @@ const data = [
         id: 1,
         img: time,
         name: 'Vaqtingiz tejalishi',
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf',
+        desc: 'Video kurslarimizni uyingizdan chiqmasdan xohlagan payt va joyda o‘rganishingiz mumkin.',
     },
     {
         id: 2,
         img: technicSupport,
         name: 'Texnik yordam',
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf',
+        desc: 'Video kursdan foydalanish jarayonida savollaringizga javob olishingiz mumkin!',
         bgColor: '#97d0ee'
     },
     {
         id: 3,
         img: flag,
         name: "Video kurslar o'zbek tilida",
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf'
+        desc: 'Video kurslarimiz sof o‘zbek tilida va shuning uchun ham tez va osonlik bilan o‘rganasiz.'
     },
     {
         id: 4,
         img: toPro,
         name: '0 dan pro darajasigacha',
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf',
+        desc: 'Video kurslarimiz sizni 0’dan professional darajagacha olib chiqadi.',
         bgColor: '#97d0ee'
     },
     {
         id: 5,
         img: telegram,
         name: 'Telegramda yopiq chat',
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf'
+        desc: 'Telegram guruhimizda o‘qituvchi va o‘quvchilar bilan doimiy fikr almashingiz mumkin.'
     },
     {
         id: 6,
         img: certificate,
         name: 'Maxsus sertifikat',
-        desc: 'lorem ipsum dolor sit amet consectetur adesepin adfad asdf adsf adsfadsf adsaffasdf',
+        desc: 'Video kursimizni to‘liq o‘z tugatganingizdan so‘ng maxsus sertifikat beriladi.',
         bgColor: '#97d0ee'
     }
 ]

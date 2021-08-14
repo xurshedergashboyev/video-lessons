@@ -10,7 +10,7 @@ import {
     TopLittleCircle,
 } from "./style";
 
-import orderImage from '../../assets/images/web03-min.png'
+import orderImage from '../../assets/images/rasm-odam.png'
 
 const OrderCta = () => {
     return (

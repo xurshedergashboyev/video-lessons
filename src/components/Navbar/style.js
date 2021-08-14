@@ -31,10 +31,11 @@ export const NavbarLogoImg = styled.img `
 
 export const NavbarItem = styled.p `
   margin-right: 50px;
-  font-size: 25px;
+  font-size: 2vw;
   color: #fff;
   cursor: pointer;
   transition: text-decoration .5s ease-in-out;
+  text-align: center;
   &:hover {
     text-decoration: underline;
   }
