@@ -83,7 +83,7 @@ export const BottomLittleCircle = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #618bef;
+  background-color: #fec56e;
   bottom: -50%;
   left: -10%;
   z-index: 1;
@@ -95,7 +95,7 @@ export const CtaButton = styled.button`
   font-size: 25px;
   display: flex;
   align-items: center;
-  background-color: #2a2850;
+  background-color: #618bef;
   box-shadow: 0 31px 41px 0 rgba(0, 0, 0, 0.3);
   outline: none;
   border: none;

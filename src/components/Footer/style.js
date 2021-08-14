@@ -11,8 +11,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export const ContactContainer = styled.div`
@@ -30,7 +29,7 @@ export const ContactItem = styled.div`
 `;
 
 export const ContactIcon = styled.img`
-  height: 100%;
+  height: 75%;
   width: auto;
   margin-right: 10px;
 `;
@@ -41,7 +40,15 @@ export const ContactInfo = styled.p`
   width: 100%;
 `;
 
-export const Map = styled.div`
+export const MapContainer = styled.div `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 650px;
+  height: 400px;
+`;
+
+export const Map = styled.iframe`
   width: 100%;
   height: 100%;
 `;
