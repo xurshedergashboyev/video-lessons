@@ -35,7 +35,7 @@ export const CtaButtonContainer = styled.div`
   z-index: 5;
   position: relative;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 export const TopLittleCircle = styled.div`

@@ -17,7 +17,7 @@ import {
     Icon,
     TopLittleCircle,
     CtaButtonContainer,
-    BottomLittleCircle
+    BottomLittleCircle, Link
 } from "./style";
 import Navbar from "../Navbar";
 import rightArrow from '../../assets/icons/arrow-right-circle-line.svg'
@@ -44,7 +44,10 @@ const HeaderCta = () => {
                                 <TopLittleCircle />
                                 <BottomLittleCircle />
                                 <CtaButton>
-                                    kurslar ro'yhati <Icon className="icon" src={rightArrow} />
+                                    <Link href="#courses">
+                                        kurslar ro'yhati
+                                    </Link>
+                                    <Icon className="icon" src={rightArrow} />
                                 </CtaButton>
                             </CtaButtonContainer>
                         </CtaContainer>

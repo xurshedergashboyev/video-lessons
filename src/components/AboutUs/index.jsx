@@ -11,7 +11,7 @@ import {
     FacilitiesItemImg,
     FacilitiesItemName,
     FacilitiesItemImage,
-    FacilitiesInfo
+    FacilitiesInfo, Circle, Heading
 } from "./style";
 
 import leftImage from '../../assets/images/Group 5 copy.png';
@@ -67,15 +67,18 @@ const data = [
 
 const AboutUs = () => {
     return (
-        <Wrapper>
+        <Wrapper id="about-us">
             <Container>
                 <ImageContainer>
                     <Image src={leftImage}/>
                 </ImageContainer>
                 <RightContainer>
-                    <Header>
-                        Biz haqimizda
-                    </Header>
+                    <Heading>
+                        <Header>
+                            Biz haqimizda
+                        </Header>
+                        <Circle />
+                    </Heading>
                     <Facilities>
                         {data.map(item =>
                             <FacilitiesItem key={item.id}>

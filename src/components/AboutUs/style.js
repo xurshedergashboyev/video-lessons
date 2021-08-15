@@ -34,25 +34,27 @@ export const RightContainer = styled.div`
   margin-right: 50px;
 `;
 
+export const Circle = styled.div `
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fb9591;
+  top: 30%;
+  right: -1%;
+  z-index: -1;
+`;
+
+export const Heading = styled.div `
+  margin-bottom: 100px;
+  position: relative;
+  margin-top: 50px;
+  z-index: 5;
+`;
+
 export const Header = styled.div`
   font-size: 100px;
   color: #2a2850;
-  margin-bottom: 100px;
-  margin-top: 50px;
-  position: relative;
-  z-index: 5;
-
-  &:before {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #fb9591;
-    top: 30%;
-    right: 0;
-    z-index: 1;
-  }
 `;
 
 export const Facilities = styled.div`

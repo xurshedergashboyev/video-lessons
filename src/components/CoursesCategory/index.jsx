@@ -11,6 +11,7 @@ import {
 // images && icons
 import showMore from "../../assets/icons/arrow-right-circle-line.svg";
 import courseImage from '../../assets/images/Layer 10 copy 2.png'
+import CourseItemCategory from "../CourseItemCategory";
 
 
 const data = [
@@ -57,32 +58,27 @@ const courses = [
 
 
 const CoursesCategory = () => {
-    const [seeMore, setSeeMore] = useState(false);
+    const [opened, setOpened] = useState(null);
 
-    const showMoreClick = () => {
-        setSeeMore(!seeMore);
-    }
+
     return (
         <CoursesList>
             <CoursesListHeading>
                 Kurslar ro'yhati
             </CoursesListHeading>
-            {courses.map(item =>
-                <Course onClick={showMoreClick}>
-                    Office dasturlari
-                    <MoreCourses rotate={seeMore} src={showMore}/>
-                </Course>
+            {courses.map((item, index) =>
+                <CourseItemCategory open={opened} setOpen={setOpened} name={item.name} key={item.id} index={index}/>
             )}
-            {seeMore ?
-                <FlexCourses>
-                    {data.map(course =>
-                        <FlexCourse key={course.id}>
-                            <FlexCourseImage src={course.img}/>
-                        </FlexCourse>
-                    )}
-                </FlexCourses>
-                : null
-            }
+            {/*{seeMore ?*/}
+            {/*    <FlexCourses>*/}
+            {/*        {data.map(course =>*/}
+            {/*            <FlexCourse key={course.id}>*/}
+            {/*                <FlexCourseImage src={course.img}/>*/}
+            {/*            </FlexCourse>*/}
+            {/*        )}*/}
+            {/*    </FlexCourses>*/}
+            {/*    : null*/}
+            {/*}*/}
         </CoursesList>
     )
 }

@@ -29,15 +29,36 @@ export const NavbarLogoImg = styled.img `
   height: 100%;
 `;
 
-export const NavbarItem = styled.p `
+export const NavbarItem = styled.a `
   margin-right: 50px;
   font-size: 2vw;
-  color: #fff;
+  color: #e1e1e1;
   cursor: pointer;
-  transition: text-decoration .5s ease-in-out;
+  //transition: .5s ease-in-out;
   text-align: center;
+  position: relative;
+  transition: all .5s ease-in-out;
+  text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    color: #fff;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: #fff;
+    height: 2px;
+    transition: all .5s ease-in-out;
   }
 `;
 

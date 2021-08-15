@@ -39,7 +39,7 @@ const socialItems = [
 
 const FormSection = () => {
     return (
-        <Container>
+        <Container id="form">
             <FormContainer>
                 <Circle/>
                 <Form>

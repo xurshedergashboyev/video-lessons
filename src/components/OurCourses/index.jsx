@@ -1,5 +1,5 @@
 import {
-    Container,
+    Container, FlexCircle,
     FlexCourse,
     FlexCourseImage,
     FlexCourses,
@@ -22,17 +22,13 @@ const data = [
         id: 3,
         img: courseImage
     },
-    {
-        id: 4,
-        img: courseImage
-    },
 ]
 
 const OurCourses = () => {
 
     return (
         // <RightLongImage src={rightImage}/>
-        <Container>
+        <Container id="courses">
             <Heading>
                 Bizning kurslar
             </Heading>
@@ -40,6 +36,7 @@ const OurCourses = () => {
                 {data.map(course =>
                     <FlexCourse key={course.id}>
                         <FlexCourseImage src={course.img}/>
+                        <FlexCircle />
                     </FlexCourse>
                 )}
             </FlexCourses>

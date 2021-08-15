@@ -114,29 +114,11 @@ export const CtaButton = styled.button`
       transition: margin-left .3s ease-in-out;
     } 
   }
-  //&:before {
-  //  content: '';
-  //  position: absolute;
-  //  width: 60px;
-  //  height: 60px;
-  //  border-radius: 50%;
-  //  background-color: #97d0ee;
-  //  top: -50%;
-  //  right: -10%;
-  //  //z-index: 1;
-  //}
-  //
-  //&:after {
-  //  position: absolute;
-  //  content: '';
-  //  width: 50px;
-  //  height: 50px;
-  //  border-radius: 50%;
-  //  background-color: #618bef;
-  //  bottom: -50%;
-  //  left: -10%;
-  //  z-index: 1;
-  //}
+`;
+
+export const Link = styled.a `
+  color: #fff;
+  text-decoration: none;
 `;
 
 export const Icon = styled.img`
@@ -202,7 +184,7 @@ export const NavbarPhoneButton = styled.button`
   right: 30px;
   cursor: pointer;
   border-radius: 12px;
-
+  transition: .3s ease-in-out;
   &:hover {
     box-shadow: 0 11px 41px 0 rgba(0, 0, 0, 0.5);
   }

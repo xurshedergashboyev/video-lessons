@@ -28,8 +28,9 @@ export const Heading = styled.h2 `
 export const FlexCourses = styled.div `
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 80%;
   margin-left: 150px;
+  z-index: 5;
 `;
 
 export const FlexCourse = styled.div `
@@ -37,9 +38,22 @@ export const FlexCourse = styled.div `
   height: auto;
   margin-right: 150px;
   margin-bottom: 100px;
+  z-index: 5;
+  position: relative;
 `;
 
 export const FlexCourseImage = styled.img `
   width: 100%;
   height: 100%;
+`;
+
+export const FlexCircle = styled.div `
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  background-color: #92cae6;
+  top: 0;
+  right: -15%;
+  z-index: -1;
+  border-radius: 50%;
 `;

@@ -36,11 +36,12 @@ export const MoreCourses = styled.img `
   transition: transform .45s cubic-bezier(.44, .99, .48, 1);
 `;
 
-
 export const FlexCourses = styled.div `
   display: flex;
   width: 80%;
   margin-left: 150px;
+  height: ${props => props.opacity ? "400px" : "0px"};
+  transition: .3s ease-in-out;
 `;
 
 export const FlexCourse = styled.div `

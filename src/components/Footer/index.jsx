@@ -15,30 +15,35 @@ import historyLine from '../../assets/icons/history-line.svg';
 import mapLine from '../../assets/icons/map-pin-line.svg';
 import phoneLine from '../../assets/icons/phone-line.svg';
 
+const contactDetails = [
+    {
+        name: 'Toshkent shahar Chilonzor tumani 45-uy',
+        img: mapLine
+    },
+    {
+        name: '55 500 01 09',
+        img: phoneLine
+    },
+    {
+        name: '9:00 - 18:00 gacha',
+        img: historyLine
+    }
+]
+
 const Footer = () => {
     return (
         <div>
-            <Wrapper>
+            <Wrapper id="contact">
                 <Container>
                     <ContactContainer>
-                        <ContactItem>
-                            <ContactIcon src={historyLine}/>
-                            <ContactInfo>
-                                Toshkent shahar Chilonzor tumani 45-uy
-                            </ContactInfo>
-                        </ContactItem>
-                        <ContactItem>
-                            <ContactIcon src={mapLine}/>
-                            <ContactInfo>
-                                55 500 01 09
-                            </ContactInfo>
-                        </ContactItem>
-                        <ContactItem>
-                            <ContactIcon src={phoneLine}/>
-                            <ContactInfo>
-                                9:00 - 18:00 gacha
-                            </ContactInfo>
-                        </ContactItem>
+                        {contactDetails.map((contact, i) =>
+                            <ContactItem key={i}>
+                                <ContactIcon src={contact.img}/>
+                                <ContactInfo>
+                                    {contact.name}
+                                </ContactInfo>
+                            </ContactItem>
+                        )}
                     </ContactContainer>
                     <MapContainer>
                         <Map
@@ -48,7 +53,9 @@ const Footer = () => {
                 </Container>
             </Wrapper>
             <Copywriting>
-                Made with <Heart src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/red-heart_2764-fe0f.png"/> by Space21
+                Made with <Heart
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/red-heart_2764-fe0f.png"/> by
+                Space21
             </Copywriting>
         </div>
     )

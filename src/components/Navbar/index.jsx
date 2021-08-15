@@ -11,14 +11,17 @@ const navbarData = [
     {
         id: '1',
         name: 'kurslar',
+        href: '#courses'
     },
     {
         id: 2,
-        name: 'biz haqimizda'
+        name: 'biz haqimizda',
+        href: '#about-us'
     },
     {
         id: 3,
-        name: "bog'lanish"
+        name: "bog'lanish",
+        href: '#contact'
     }
 ];
 
@@ -30,7 +33,7 @@ const Navbar = () => {
                     <NavbarLogoImg alt="logo" src={logo}/>
                 </NavbarLogo>
                 {navbarData.map(item =>
-                    <NavbarItem key={item.id}>
+                    <NavbarItem href={item.href} key={item.id}>
                         {item.name}
                     </NavbarItem>
                 )}
