@@ -6,6 +6,10 @@ export const Container = styled.div `
   height: 100%;
   position: relative;
   padding-top: 50px;
+  margin-left: 150px;
+  @media screen and (max-width: 800px) {
+    margin: 0 50px;
+  }
 `;
 
 export const RightLongImage = styled.img `
@@ -14,10 +18,12 @@ export const RightLongImage = styled.img `
   position: absolute;
   top: 0;
   right: 0;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Heading = styled.h2 `
-  margin-left: 150px;
   margin-bottom: 50px;
   font-size: 100px;
   color: #2a2850;
@@ -27,9 +33,7 @@ export const Heading = styled.h2 `
 
 export const FlexCourses = styled.div `
   display: flex;
-  flex-wrap: wrap;
   width: 80%;
-  margin-left: 150px;
   z-index: 5;
 `;
 

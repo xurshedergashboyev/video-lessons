@@ -16,7 +16,7 @@ export const FirstCircle = styled.div `
   border-top-right-radius: 200px;
   position: absolute;
   top: 0;
-  left: -5%;
+  left: -50px;
   transform: rotate(90deg);
   background-color: #96cfed;
 `;
@@ -28,7 +28,7 @@ export const SecondCircle = styled.div `
   border-top-right-radius: 200px;
   position: absolute;
   top: 50%;
-  left: -5%;
+  left: -50px;
   transform: rotate(90deg);
   background-color: #f86872;
 `;
@@ -40,7 +40,7 @@ export const ThirdCircle = styled.div `
   border-top-right-radius: 200px;
   position: absolute;
   top: 90%;
-  left: -5%;
+  left: -50px;
   transform: rotate(90deg);
   background-color: #f1a2cf;
 `;

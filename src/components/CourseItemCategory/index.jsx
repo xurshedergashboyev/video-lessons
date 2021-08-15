@@ -39,8 +39,6 @@ const CourseItemCategory = (props) => {
                 {props.name}
                 <MoreCourses rotate={props.open === props.index} src={showMore}/>
             </Course>
-            {/*{*/}
-            {/*    seeMore ?*/}
             <FlexCourses opacity={props.open === props.index}>
                 {data.map(course =>
                     <FlexCourse key={course.id}>
@@ -48,8 +46,6 @@ const CourseItemCategory = (props) => {
                     </FlexCourse>
                 )}
             </FlexCourses>
-            {/*        : null*/}
-            {/*}*/}
         </div>
 
     )

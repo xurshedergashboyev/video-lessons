@@ -11,6 +11,9 @@ export const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -18,6 +21,9 @@ export const ImageContainer = styled.div`
   z-index: 10;
   position: absolute;
   left: 5%;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Image = styled.img`
@@ -32,9 +38,12 @@ export const RightContainer = styled.div`
   align-items: center;
   width: 70%;
   margin-right: 50px;
+  @media screen and (max-width: 800px) {
+    margin-right: 0;
+  }
 `;
 
-export const Circle = styled.div `
+export const Circle = styled.div`
   position: absolute;
   width: 25px;
   height: 25px;
@@ -45,16 +54,24 @@ export const Circle = styled.div `
   z-index: -1;
 `;
 
-export const Heading = styled.div `
+export const Heading = styled.div`
   margin-bottom: 100px;
   position: relative;
   margin-top: 50px;
   z-index: 5;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 50px;
+  }
 `;
 
 export const Header = styled.div`
   font-size: 100px;
   color: #2a2850;
+  @media screen and (max-width: 800px) {
+    font-size: 12vw;
+    text-align: center;
+    margin-bottom: 50px;
+  }
 `;
 
 export const Facilities = styled.div`
@@ -62,6 +79,9 @@ export const Facilities = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  @media screen and (max-width: 800px) {
+    margin: 0 50px 50px 50px;
+  }
 `;
 
 export const FacilitiesItem = styled.div`
@@ -76,6 +96,11 @@ export const FacilitiesItem = styled.div`
   @media screen and (max-width: 1300px) {
     width: 500px;
   }
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-right: 0;
+  }
 `;
 
 export const FacilitiesItemImage = styled.div`
@@ -87,6 +112,14 @@ export const FacilitiesItemImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    width: 225px;
+    height: 125px;
+  }
+  @media screen and (max-width: 450px) {
+    width: 175px;
+    height: 100px;
+  }
 `;
 
 export const FacilitiesItemImg = styled.img`
@@ -98,16 +131,26 @@ export const FacilitiesItemImg = styled.img`
 export const FacilitiesInfo = styled.div`
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const FacilitiesItemName = styled.h2`
   font-size: 25px;
   color: #2a2850;
   margin-bottom: 0;
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
+  }
 `;
 
 export const FacilitiesItemDesc = styled.p`
   font-size: 20px;
   color: #a5a5a6;
   margin-top: 0;
+  line-height: 1;
+  @media screen and (max-width: 450px) {
+    font-size: 15px;
+  }
 `;

@@ -9,6 +9,9 @@ export const NavbarContainer = styled.div `
   background-color: transparent;
   margin-top: 30px;
   margin-left: 100px;
+  @media screen and (max-width: 800px) {
+    margin-left: 50px;
+  }
 `;
 
 export const NavbarItems = styled.div `

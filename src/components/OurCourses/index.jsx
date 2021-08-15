@@ -25,9 +25,7 @@ const data = [
 ]
 
 const OurCourses = () => {
-
     return (
-        // <RightLongImage src={rightImage}/>
         <Container id="courses">
             <Heading>
                 Bizning kurslar

@@ -5,6 +5,9 @@ export const Container = styled.div`
   height: 100%;
   margin-top: 100px;
   margin-left: 150px;
+  @media screen and (max-width: 800px) {
+    margin: 100px 50px;
+  }
 `;
 
 export const FormContainer = styled.div `

@@ -12,6 +12,9 @@ export const Container = styled.div `
   justify-content: center;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftContainer = styled.div `
@@ -19,6 +22,10 @@ export const LeftContainer = styled.div `
   flex-direction: column;
   justify-content: center;
   margin-left: 100px;
+  @media screen and (max-width: 800px) {
+    margin: 0 50px;
+    align-items: center;
+  }
 `;
 
 export const LeftContainerHeading = styled.h2 `
@@ -26,6 +33,10 @@ export const LeftContainerHeading = styled.h2 `
   color: #fff;
   width: 100%;
   margin-bottom: 50px;
+  @media screen and (max-width: 800px) {
+    font-size: 60px;
+    text-align: center;
+  }
 `;
 
 export const CtaButtonContainer = styled.div`
@@ -36,6 +47,9 @@ export const CtaButtonContainer = styled.div`
   position: relative;
   margin-top: 50px;
   margin-bottom: 100px;
+  @media screen and (max-width: 800px) {
+    margin: 0 50px 100px 50px;
+  }
 `;
 
 export const TopLittleCircle = styled.div`

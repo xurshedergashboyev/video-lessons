@@ -37,6 +37,9 @@ export const LeftContainer = styled.div`
   height: 100%;
   background-color: #2a2850;
   position: relative;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const CtaContainer = styled.div`
@@ -44,6 +47,12 @@ export const CtaContainer = styled.div`
   margin-top: 10vw;
   width: 80%;
   line-height: 1;
+  @media screen and (max-width: 1000px) {
+    margin-top: 15vw;
+  }
+  @media screen and (max-width: 800px) {
+    margin: 15vw 50px 50px 50px;
+  }
 `;
 
 export const CtaHeader = styled.h1`
@@ -52,11 +61,17 @@ export const CtaHeader = styled.h1`
   margin-bottom: 10px;
   line-height: 1;
   letter-spacing: 8px;
+  @media screen and (max-width: 800px) {
+    font-size: 10vw;
+  }
 `;
 
 export const CtaDesc = styled.p`
   font-size: 2.5vw;
   color: #fff;
+  @media screen and (max-width: 800px) {
+    font-size: 5vw;
+  }
 `;
 
 export const CtaButtonContainer = styled.div`
@@ -66,6 +81,12 @@ export const CtaButtonContainer = styled.div`
   z-index: 5;
   position: relative;
   margin-top: 5vw;
+  @media screen and (max-width: 1000px) {
+    margin-top: 8vw;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 15vw;
+  }
 `;
 
 export const TopLittleCircle = styled.div`
@@ -102,7 +123,6 @@ export const CtaButton = styled.button`
   border: none;
   color: #fff;
   padding: 20px;
-  //display: flex;
   z-index: 99999;
   border-radius: 12px;
   animation: ${ButtonAnimation} 2s linear infinite;
@@ -134,7 +154,7 @@ export const BigCircle = styled.div`
   width: 150px;
   height: 150px;
   top: 20%;
-  right: -8%;
+  right: -100px;
   border-radius: 50%;
 `;
 
@@ -144,7 +164,7 @@ export const MediumCircle = styled.div`
   width: 100px;
   height: 100px;
   bottom: 0;
-  right: -5%;
+  right: -50px;
   border-radius: 50%;
 `;
 
@@ -166,6 +186,9 @@ export const RightContainer = styled.div`
   background-size: cover;
   position: relative;
   background-position: center;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const NavbarPhoneButton = styled.button`

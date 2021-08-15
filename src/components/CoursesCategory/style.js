@@ -3,11 +3,14 @@ import styled from 'styled-components'
 export const CoursesList = styled.div `
   display: flex;
   flex-direction: column;
+  margin-left: 150px;
+  @media screen and (max-width: 800px) {
+    margin: 0 50px;
+  }
 `;
 
 export const CoursesListHeading = styled.h2 `
   font-size: 50px;
-  margin-left: 150px;
   margin-bottom: 50px;
   color: #2a2850;
 `;
@@ -20,7 +23,6 @@ export const Course = styled.div `
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 50px;
-  margin-left: 150px;
   font-size: 30px;
   display: flex;
   align-items: center;
@@ -39,7 +41,6 @@ export const MoreCourses = styled.img `
 export const FlexCourses = styled.div `
   display: flex;
   width: 80%;
-  margin-left: 150px;
   height: ${props => props.opacity ? "400px" : "0px"};
   transition: .3s ease-in-out;
 `;
