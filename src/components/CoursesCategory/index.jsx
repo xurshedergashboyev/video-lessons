@@ -1,37 +1,11 @@
 import {useState} from "react";
 import {
-    Course,
     CoursesList,
     CoursesListHeading,
-    FlexCourse,
-    FlexCourseImage,
-    FlexCourses,
-    MoreCourses
 } from "./style";
 // images && icons
-import showMore from "../../assets/icons/arrow-right-circle-line.svg";
-import courseImage from '../../assets/images/Layer 10 copy 2.png'
 import CourseItemCategory from "../CourseItemCategory";
 
-
-const data = [
-    {
-        id: 1,
-        img: courseImage
-    },
-    {
-        id: 2,
-        img: courseImage
-    },
-    {
-        id: 3,
-        img: courseImage
-    },
-    {
-        id: 4,
-        img: courseImage
-    },
-]
 
 const courses = [
     {
