@@ -5,25 +5,21 @@ import {RightLongImage} from "../../components/OurCourses/style";
 import rightImage from '../../assets/images/rasm.png';
 import rightImageRes from '../../assets/images/w-.png';
 import FormSection from "../../components/FormSection";
-
+// hook
+import useWindowDimensions from "../../hooks";
 
 const CoursesList = () => {
-    let image;
-    if (window.matchMedia("(max-width: 1100px)").matches) {
-        image = rightImage;
-    } else {
-        image = rightImageRes;
-    }
+    const {width} = useWindowDimensions()
 
     return (
         <Wrapper>
-            <RightLongImage src={image}/>
-            <FirstCircle />
-            <SecondCircle />
-            <ThirdCircle />
-            <OurCourses />
-            <CoursesCategory />
-            <FormSection />
+            <RightLongImage src={width > 1100 ? rightImage : rightImageRes}/>
+            <FirstCircle/>
+            <SecondCircle/>
+            <ThirdCircle/>
+            <OurCourses/>
+            <CoursesCategory/>
+            <FormSection/>
         </Wrapper>
     )
 }
