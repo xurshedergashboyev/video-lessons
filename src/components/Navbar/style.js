@@ -80,5 +80,6 @@ export const NavbarImg = styled.img `
     right: 30px;
     width: 30px;
     height: 50px;
+    cursor: pointer;
   }
 `;

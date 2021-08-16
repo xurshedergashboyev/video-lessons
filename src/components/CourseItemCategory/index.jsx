@@ -1,6 +1,5 @@
 import {Course, FlexCourse, FlexCourseImage, FlexCourses, MoreCourses} from "../CoursesCategory/style";
 import showMore from "../../assets/icons/arrow-right-circle-line.svg";
-import {useState} from "react";
 import courseImage from "../../assets/images/Layer 10 copy 2.png";
 import {Container} from "./style";
 
@@ -25,12 +24,6 @@ const data = [
 
 
 const CourseItemCategory = (props) => {
-    // const [seeMore, setSeeMore] = useState(false);
-
-    // const showMoreClick = () => {
-    //     setSeeMore(!seeMore);
-    // }
-
     return (
         <Container>
             <Course onClick={() => {

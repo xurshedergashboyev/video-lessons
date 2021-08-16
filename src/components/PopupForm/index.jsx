@@ -1,4 +1,4 @@
-import {Wrapper, Circle, Form, FormContainer, FormHeading, NameInput, SubmitButton, CloseIcon} from "./style";
+import {Wrapper, Form, FormContainer, FormHeading, NameInput, SubmitButton, CloseIcon} from "./style";
 import axios from "axios";
 // import {Wrapper} from "./style";
 const closeIcon = 'https://firebasestorage.googleapis.com/v0/b/space-21-72f2b.appspot.com/o/images%2Fclose.svg?alt=media&token=971022d0-16a5-44d1-9d73-597fed64a654'
@@ -24,7 +24,7 @@ const PopupForm = ({isOpen, callback}) => {
         <Wrapper isOpen={isOpen}>
             <FormContainer>
                 <CloseIcon>
-                    <img src={closeIcon} onClick={callback} className="close-icon"/>
+                    <img alt={"close-icon"} src={closeIcon} onClick={callback} className="close-icon"/>
                 </CloseIcon>
                 <Form onSubmit={handleSubmit}>
                     <FormHeading>
