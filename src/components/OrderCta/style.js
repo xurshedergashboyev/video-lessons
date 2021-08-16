@@ -40,6 +40,10 @@ export const LeftContainerHeading = styled.h2 `
     font-size: 10vw;
     text-align: center;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 8vw;
+    text-align: center;
+  }
 `;
 
 export const CtaButtonContainer = styled.div`

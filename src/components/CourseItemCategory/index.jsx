@@ -17,11 +17,13 @@ const CourseItemCategory = (props) => {
                 props.setOpen(props.index)
             }}>
                 {props.name}
+                 {/*eslint-disable-next-line no-use-before-define*/}
                 <MoreCourses rotate={props.open === props.index && seeMore} src={showMore}/>
             </Course>
+            {/*eslint-disable-next-line no-use-before-define*/}
             <FlexCourses width={props.img.length} opacity={props.open === props.index && seeMore}>
-                {props.img.map(img =>
-                    <FlexCourse>
+                {props.img.map((img, index) =>
+                    <FlexCourse key={index}>
                         <FlexCourseImage src={img} alt="course-item"/>
                     </FlexCourse>
                 )}

@@ -103,6 +103,7 @@ export const NumberInput = styled(NumberFormat) `
   &::placeholder {
     font-size: 20px;
     color: #a6a6a6;
+    font-family: 'Ausion', sans-serif;
   }
 `;
 
@@ -122,6 +123,7 @@ export const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   @media screen and (max-width: 550px) {
     font-size: 25px;
     text-align: center;
@@ -153,6 +155,6 @@ export const Loading = styled.div`
   height: 30px;
   border: 2px solid #fff;
   border-top-color: transparent;
-  animation: ${Animation} 3s infinite linear;
+  animation: ${Animation} 1s infinite linear;
   border-radius: 50%;
 `;

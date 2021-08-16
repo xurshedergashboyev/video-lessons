@@ -11,7 +11,8 @@ import {
     SocialContainer,
     SocialImage,
     SocialItem,
-    SocialIconContainer, SocialLink
+    SocialIconContainer,
+    SocialLink, SelectOption,
 } from "./style";
 
 import telegram from '../../assets/icons/telegram2.svg';
@@ -47,6 +48,21 @@ const socialItems = [
 const FormSection = () => {
     const [submit, setSubmit] = useState({loading: false, error: false, success: false})
 
+    const options = [
+        { value: 'Office Word', label: 'Office Word'},
+        { value: 'Office Excel', label: 'Office Excel'},
+        { value: 'Office PowerPoint', label: 'Office PowerPoint'},
+        { value: '1c', label: '1c'},
+        { value: 'HTML & CSS', label: 'HTML & CSS'},
+        { value: 'PHP', label: 'PHP'},
+        { value: 'Telegram Bot', label: 'Telegram Bot'},
+        { value: 'Telegram Business', label: 'Telegram Business'},
+        { value: 'CorelDraw', label: 'CorelDraw'},
+        { value: 'Adobe Photoshop', label: 'Adobe Photoshop'},
+        { value: '3d Max', label: '3d Max'},
+        { value: 'BEM Method', label: 'BEM Method'}
+    ]
+
     const [number, setNumber] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -54,13 +70,16 @@ const FormSection = () => {
         setSubmit({loading: true, error: false, success: false})
         const name = e.target.name.value;
         const phone = e.target.phone.value;
-        const course = e.target.course.value;
+        const course = e.target.select.value;
 
         const form = {
+            // original
             chat_id: '513214213',
+            // test
+            // chat_id: '286602133',
             text: `${name} \n ${phone} \n ${course} `
         }
-
+        console.log(form)
         axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})
@@ -100,12 +119,31 @@ const FormSection = () => {
                         name={"phone"}
                         placeholder="Telefon raqmingiz"
                     />
-                    <NameInput
-                        maxLength="30"
-                        minLength={"3"}
-                        required
-                        name={"course"}
-                        placeholder="Kurs nomini kiriting"/>
+                    {/*<NameInput*/}
+                    {/*    maxLength="30"*/}
+                    {/*    minLength={"3"}*/}
+                    {/*    required*/}
+                    {/*    name={"course"}*/}
+                    {/*    placeholder="Kurs nomini kiriting"/>*/}
+                    <SelectOption
+                        name={"select"}
+                        options={options}
+                        // onChange={(e)=>setSelected(e.value)}
+                        maxMenuHeight={150}
+                        // className="select-option"
+                        theme={(theme) => ({
+                            ...theme,
+                            borderRadius: 8,
+                            height: "50px",
+                            colors: {
+                                ...theme.colors,
+                                text: "#000",
+                                primary25: "#b3daef",
+                                primary50: "#92c9e5",
+                                primary: "#92c9e5",
+                            },
+                        })}
+                        />
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
                         {submit.loading ?
                             <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yhatdan o'tish"}
@@ -117,8 +155,8 @@ const FormSection = () => {
                     Bizni ijtimoiy tarmoqlarda doimiy kuzatib boring
                 </SocialHeading>
                 <SocialIconContainer>
-                    {socialItems.map(item =>
-                        <SocialLink target="_blank" href={item.link}>
+                    {socialItems.map((item, index) =>
+                        <SocialLink key={index} target="_blank" href={item.link}>
                             <SocialItem key={item.id}>
                                 <SocialImage src={item.img}/>
                             </SocialItem>

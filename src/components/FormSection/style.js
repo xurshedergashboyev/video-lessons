@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Select from 'react-select'
 
 export const Container = styled.div`
   width: 100%;
@@ -35,6 +36,21 @@ export const Form = styled.form`
     padding: 25px;
     border-radius: 15px;
   }
+  .select-option {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+    font-size: 20px;
+    height: 50px;
+    //min-height: 100%;
+    &::placeholder {
+      font-size: 20px;
+      color: #a6a6a6;
+    }
+  }
 `;
 
 export const Circle = styled.div `
@@ -54,7 +70,7 @@ export const FormHeading = styled.h2`
   color: #fff;
   margin-bottom: 50px;
   @media screen and (max-width: 550px) {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 25px;
   }
@@ -69,6 +85,23 @@ export const NameInput = styled.input`
   outline: none;
   margin-bottom: 25px;
   padding: 10px;
+  font-size: 20px;
+
+  &::placeholder {
+    font-size: 20px;
+    color: #a6a6a6;
+  }
+`;
+
+export const SelectOption = styled(Select) `
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  margin-bottom: 50px;
+  //padding: 10px;
   font-size: 20px;
 
   &::placeholder {
@@ -93,6 +126,7 @@ export const SubmitButton = styled.button `
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   @media screen and (max-width: 550px) {
     font-size: 25px;
     text-align: center;
@@ -119,7 +153,7 @@ export const SocialHeading = styled.h3 `
     width: 75%;
   }
   @media screen and (max-width: 550px) {
-    font-size: 8vw;
+    font-size: 7vw;
     text-align: center;
   }
 `;

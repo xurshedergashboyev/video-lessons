@@ -47,7 +47,7 @@ export const FlexCourses = styled.div `
   width: 80%;
   z-index: 5;
   @media screen and (max-width: 550px) {
-   flex-wrap: wrap;
+   flex-wrap: wrap;  
     justify-content: center;
   }
 `;

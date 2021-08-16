@@ -11,10 +11,27 @@ import {
 } from "./style";
 import axios from "axios";
 import {useState} from "react";
+import {SelectOption} from "../FormSection/style";
 // import {Wrapper} from "./style";
 const closeIcon = 'https://firebasestorage.googleapis.com/v0/b/space-21-72f2b.appspot.com/o/images%2Fclose.svg?alt=media&token=971022d0-16a5-44d1-9d73-597fed64a654'
 
 const PopupForm = ({isOpen, callback}) => {
+
+    const options = [
+        { value: 'Office Word', label: 'Office Word'},
+        { value: 'Office Excel', label: 'Office Excel'},
+        { value: 'Office PowerPoint', label: 'Office PowerPoint'},
+        { value: '1c', label: '1c'},
+        { value: 'HTML & CSS', label: 'HTML & CSS'},
+        { value: 'PHP', label: 'PHP'},
+        { value: 'Telegram Bot', label: 'Telegram Bot'},
+        { value: 'Telegram Business', label: 'Telegram Business'},
+        { value: 'CorelDraw', label: 'CorelDraw'},
+        { value: 'Adobe Photoshop', label: 'Adobe Photoshop'},
+        { value: '3d Max', label: '3d Max'},
+        { value: 'BEM Method', label: 'BEM Method'}
+    ]
+
     const [submit, setSubmit] = useState({loading: false, error: false, success: false});
     const [number, setNumber] = useState('')
 
@@ -24,10 +41,13 @@ const PopupForm = ({isOpen, callback}) => {
         setSubmit({loading: true, error: false, success: false})
         const name = e.target.name.value;
         const phone = e.target.phone.value;
-        const course = e.target.course.value;
+        const course = e.target.select.value;
 
         const form = {
+            // original
             chat_id: '513214213',
+            // test
+            // chat_id: '286602133',
             text: `${name} \n ${phone} \n ${course} `
         }
 
@@ -39,6 +59,7 @@ const PopupForm = ({isOpen, callback}) => {
             })
             .catch((err) => {
                 setSubmit({loading: false, error: true, success: false})
+                console.log(err)
             })
             .finally(()=> {
                 setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
@@ -71,12 +92,24 @@ const PopupForm = ({isOpen, callback}) => {
                         name={"phone"}
                         placeholder="Telefon raqmingiz"
                     />
-                    <NameInput
-                        maxLength="30"
-                        minLength={"3"}
-                        required
-                        name={"course"}
-                        placeholder="Kurs nomini kiriting"
+                    <SelectOption
+                        name={"select"}
+                        options={options}
+                        // onChange={(e)=>setSelected(e.value)}
+                        maxMenuHeight={150}
+                        // className="select-option"
+                        theme={(theme) => ({
+                            ...theme,
+                            borderRadius: 8,
+                            height: "50px",
+                            colors: {
+                                ...theme.colors,
+                                text: "#000",
+                                primary25: "#b3daef",
+                                primary50: "#92c9e5",
+                                primary: "#92c9e5",
+                            },
+                        })}
                     />
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
                         {submit.loading ?
