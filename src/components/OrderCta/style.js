@@ -127,4 +127,5 @@ export const RightContainer = styled.div `
 export const RightContainerImage = styled.img `
   width: 100%;
   height: 100%;
+  margin-bottom: -5px;
 `;

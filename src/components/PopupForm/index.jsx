@@ -55,10 +55,29 @@ const PopupForm = ({isOpen, callback}) => {
                     <FormHeading>
                         Buyurtma berish uchun quyidagi formani to'ldiring!
                     </FormHeading>
-                    <NameInput required name={"name"} placeholder="Ismingiz" maxLength="15" minLength={"3"}/>
-                    <NumberInput value={number} onChange={(e) => setNumber(e.target.value)} format="+998 (##) ###-##-##"
-                                 mask="_" required name={"phone"} placeholder="Telefon raqmingiz"/>
-                    <NameInput maxLength="30" minLength={"3"} required name={"course"} placeholder="Kurs nomini kiriting"/>
+                    <NameInput
+                        required
+                        name={"name"}
+                        placeholder="Ismingiz"
+                        maxLength="15"
+                        minLength={"3"}
+                    />
+                    <NumberInput
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                        format="+998 (##) ###-##-##"
+                        mask="_"
+                        required
+                        name={"phone"}
+                        placeholder="Telefon raqmingiz"
+                    />
+                    <NameInput
+                        maxLength="30"
+                        minLength={"3"}
+                        required
+                        name={"course"}
+                        placeholder="Kurs nomini kiriting"
+                    />
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
                         {submit.loading ?
                             <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yhatdan o'tish"}

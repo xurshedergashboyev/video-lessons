@@ -6,6 +6,7 @@ import {
 // images && icons
 import CourseItemCategory from "../CourseItemCategory";
 import ellipse from '../../assets/images/elipse.png';
+
 import word from '../../assets/images/layers/Word.png';
 import powerPoint from '../../assets/images/layers/Power Point.png';
 import excel from '../../assets/images/layers/Exsel.png';
@@ -16,7 +17,8 @@ import php from '../../assets/images/layers/PHP-.png';
 import tgBot from '../../assets/images/layers/Tg.png';
 import photoshop from '../../assets/images/layers/Photoshop.png';
 import threeDMax from '../../assets/images/layers/3d max.png';
-
+import bem from '../../assets/images/layers/BEM.png';
+import telegram from '../../assets/images/layers/Tg-b.png'
 
 const courses = [
     {
@@ -44,11 +46,12 @@ const courses = [
         name: 'IT kurslari',
         img:
             [
+                telegram,
                 html,
                 php,
                 tgBot,
+                bem
             ]
-
     },
     {
         id: 4,

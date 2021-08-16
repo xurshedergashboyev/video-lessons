@@ -27,10 +27,23 @@ export const NavbarLogo = styled.div `
   height: auto;
   margin-right: 50px;
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
 `;
 
-export const NavbarAnchor = styled.div `
-  
+export const NavbarAnchor = styled.a `
+  width: 75px;
+  height: auto;
+  margin-right: 50px;
+  cursor: pointer;
+  @media screen and (max-width: 800px) {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+  }
 `;
 
 export const NavbarLogoImg = styled.img `
@@ -81,7 +94,7 @@ export const NavbarImg = styled.img `
     display: flex;
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 45px;
     width: 30px;
     height: 50px;
     cursor: pointer;

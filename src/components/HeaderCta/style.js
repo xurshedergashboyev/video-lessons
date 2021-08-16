@@ -47,6 +47,7 @@ export const CtaContainer = styled.div`
   margin-top: 10vw;
   width: 80%;
   line-height: 1;
+  z-index: 5;
   @media screen and (max-width: 1000px) {
     margin-top: 15vw;
   }
@@ -63,7 +64,8 @@ export const CtaHeader = styled.h1`
   color: #fff;
   margin-bottom: 10px;
   line-height: 1;
-  letter-spacing: 8px;
+  letter-spacing: 5px;
+  //z-index: 0;
   @media screen and (max-width: 800px) {
     font-size: 10vw;
   }
@@ -74,6 +76,7 @@ export const CtaDesc = styled.p`
   color: #fff;
   @media screen and (max-width: 800px) {
     font-size: 5vw;
+    margin-top: 0;
   }
 `;
 
@@ -89,6 +92,9 @@ export const CtaButtonContainer = styled.div`
   }
   @media screen and (max-width: 800px) {
     margin-top: 15vw;
+  }
+  @media screen and (max-width: 500px) {
+    margin-top: 20vw;
   }
 `;
 
@@ -159,6 +165,11 @@ export const BigCircle = styled.div`
   top: 20%;
   right: -100px;
   border-radius: 50%;
+  z-index: 0;
+  @media screen and (max-width: 800px) {
+    z-index: 0;
+    right: -120px;
+  }
 `;
 
 export const MediumCircle = styled.div`

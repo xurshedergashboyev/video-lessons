@@ -24,6 +24,9 @@ export const FirstCircle = styled.div `
   left: -50px;
   transform: rotate(90deg);
   background-color: #96cfed;
+  @media screen and (max-width: 800px) {
+    left: -100px;
+  }
 `;
 
 export const SecondCircle = styled.div `
@@ -36,6 +39,9 @@ export const SecondCircle = styled.div `
   left: -50px;
   transform: rotate(90deg);
   background-color: #f86872;
+  @media screen and (max-width: 800px) {
+    left: -100px;
+  }
 `;
 
 export const ThirdCircle = styled.div `
@@ -48,4 +54,7 @@ export const ThirdCircle = styled.div `
   left: -50px;
   transform: rotate(90deg);
   background-color: #f1a2cf;
+  @media screen and (max-width: 800px) {
+    left: -100px;
+  }
 `;

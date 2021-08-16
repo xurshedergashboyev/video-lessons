@@ -28,7 +28,7 @@ export const ContactItem = styled.div`
   display: flex;
   height: 75px;
   width: 100%;
-  align-items: center;
+  align-items: ${props => props.center ? 'flex-start' : 'center'};
 `;
 
 export const ContactIcon = styled.img`

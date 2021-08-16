@@ -29,11 +29,12 @@ export const NavItems = styled.div`
   @media screen and (max-width: 600px) {
     margin-top: 50px;
     margin-left: 25px;
+    width: 70%;
   }
 `
 
 export const Mask = styled.div `
-  margin: 0 0 50px 0;
+  margin: 0 0 25px 0;
 `
 
 export const Attr = styled.a `
@@ -56,9 +57,13 @@ export const CloseIcon = styled.img`
   height: 30px;
   margin-right: 50px;
   @media screen and (max-width: 700px) {
-    margin-right: 25px;
     margin-top: 10px;
+    margin-right: 0;
   }
+`;
+
+export const CloseIconContainer = styled.div `
+  cursor: pointer;
 `;
 
 export const NavbarPhoneButton = styled.button`

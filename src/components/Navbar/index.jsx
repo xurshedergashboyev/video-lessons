@@ -1,7 +1,6 @@
 import {
     NavbarContainer,
     NavbarItems,
-    NavbarLogo,
     NavbarLogoImg,
     NavbarItem, NavbarImg, NavbarAnchor,
 } from "./style";
@@ -38,11 +37,11 @@ const Navbar = () => {
     return (
         <NavbarContainer>
             <NavbarItems>
-                <NavbarLogo>
+                {/*<NavbarLogo>*/}
                     <NavbarAnchor href="/">
                         <NavbarLogoImg alt="logo" src={logo}/>
                     </NavbarAnchor>
-                </NavbarLogo>
+                {/*</NavbarLogo>*/}
                 {navbarData.map(item =>
                     <NavbarItem href={item.href} key={item.id}>
                         {item.name}

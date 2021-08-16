@@ -19,11 +19,12 @@ const contactDetails = [
     {
         name: 'Olmazor tuman, Langar ko\'chasi 76-uy',
         img: mapLine,
+        center: true
     },
     {
         name: '55 500 01 09',
         img: phoneLine,
-        href: 'tel: +998555000109'
+        href: 'tel: +998555000109',
     },
     {
         name: '9:00 - 18:00 gacha',
@@ -38,7 +39,7 @@ const Footer = () => {
                 <Container>
                     <ContactContainer>
                         {contactDetails.map((contact, i) =>
-                            <ContactItem key={i}>
+                            <ContactItem center={contact?.center} key={i}>
                                 <ContactIcon src={contact.img}/>
                                 <ContactInfo href={contact?.href}>
                                     {contact.name}

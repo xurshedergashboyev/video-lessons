@@ -7,7 +7,7 @@ import {
     NavbarPhoneButton,
     NavbarPhoneIcon,
     NavbarPhoneNumber,
-    Attr
+    Attr, CloseIconContainer
 } from "./style";
 import phoneIcon from "../../assets/icons/phone.svg";
 // icon
@@ -43,9 +43,9 @@ const  Sidebar = ({isOpen, callback}) => {
                     </NavbarPhoneButton>
                 </Mask>
             </NavItems>
-            <div>
+            <CloseIconContainer>
                 <CloseIcon  width={50} height={50} src={closeIcon} alt="close" onClick={callback}/>
-            </div>
+            </CloseIconContainer>
         </NavbarWrapper>
     )
 }

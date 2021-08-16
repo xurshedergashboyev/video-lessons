@@ -56,6 +56,7 @@ export const FormHeading = styled.h2`
   @media screen and (max-width: 550px) {
     font-size: 25px;
     text-align: center;
+    margin-bottom: 25px;
   }
 `;
 

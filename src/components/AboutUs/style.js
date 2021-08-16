@@ -52,6 +52,10 @@ export const Circle = styled.div`
   top: 30%;
   right: -1%;
   z-index: -1;
+  @media screen and (max-width: 800px) {
+    top: 10%;
+    right: -3%;
+  }
 `;
 
 export const Heading = styled.div`
@@ -68,9 +72,18 @@ export const Header = styled.div`
   font-size: 100px;
   color: #2a2850;
   @media screen and (max-width: 800px) {
-    font-size: 12vw;
+    font-size: 80px;
     text-align: center;
     margin-bottom: 50px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 65px;
+  }
+  @media screen and (max-width: 530px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 410px) {
+    font-size: 12vw;
   }
 `;
 

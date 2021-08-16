@@ -30,8 +30,8 @@ export const RightLongImage = styled.img `
 `;
 
 export const Heading = styled.h2 `
-  margin-bottom: 50px;
-  font-size: 10vw;
+  margin-bottom: 100px;
+  font-size: 9vw;
   color: #2a2850;
   position: relative;
   margin-top: 0;
