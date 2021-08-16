@@ -81,7 +81,7 @@ const CoursesCategory = () => {
     return (
         <CoursesList>
             <CoursesListHeading>
-                Kurslar ro'yhati
+                Kurslar ro'yxati
             </CoursesListHeading>
             {courses.map((item, index) =>
                 <CourseItemCategory img={item.img} open={opened} setOpen={setOpened} name={item.name}

@@ -53,8 +53,8 @@ export const Attr = styled.a `
 
 export const CloseIcon = styled.img`
   margin-top: 20px;
-  width: 30px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
   margin-right: 50px;
   @media screen and (max-width: 700px) {
     margin-top: 10px;
@@ -64,6 +64,8 @@ export const CloseIcon = styled.img`
 
 export const CloseIconContainer = styled.div `
   cursor: pointer;
+  height: 30px;
+  width: 30px;
 `;
 
 export const NavbarPhoneButton = styled.button`
