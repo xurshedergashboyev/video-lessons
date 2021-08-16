@@ -22,53 +22,52 @@ const courses = [
     {
         id: 1,
         name: 'Office dasturlari',
-        img: [
-            {
-                first: word,
-                second: excel,
-                third: powerPoint
-            },
-        ]
+        img:
+            [
+                word,
+                excel,
+                powerPoint
+            ],
     },
     {
         id: 2,
         name: 'Grafik Dizayn',
-        img: [
-            {
-                first: photoshop,
-                second: corelDraw
-            },
-        ]
+        img:
+            [
+                photoshop,
+                corelDraw
+            ],
+
     },
     {
         id: 3,
         name: 'IT kurslari',
-        img: [
-            {
-                first: html,
-                second: php,
-                third: tgBot,
-            },
-        ]
+        img:
+            [
+                html,
+                php,
+                tgBot,
+            ]
+
     },
     {
         id: 4,
         name: 'Buxgalteriya',
-        img: [
-            {
-                first: oneC,
-                second: excel
-            },
-        ]
+        img:
+            [
+                oneC,
+                excel
+            ],
+
     },
     {
         id: 5,
         name: '3d kurslari',
-        img: [
-            {
-                first: threeDMax,
-            },
-        ]
+        img:
+            [
+                threeDMax,
+            ],
+
     }
 ]
 
@@ -82,7 +81,8 @@ const CoursesCategory = () => {
                 Kurslar ro'yhati
             </CoursesListHeading>
             {courses.map((item, index) =>
-                <CourseItemCategory open={opened} setOpen={setOpened} name={item.name} key={item.id} index={index}/>
+                <CourseItemCategory img={item.img} open={opened} setOpen={setOpened} name={item.name}
+                                    key={item.id} index={index}/>
             )}
             <Ellipse src={ellipse} alt="ellipse"/>
         </CoursesList>

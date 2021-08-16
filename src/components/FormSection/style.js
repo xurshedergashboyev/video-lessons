@@ -144,6 +144,10 @@ export const SocialIconContainer = styled.div `
   }
 `;
 
+export const SocialLink = styled.a `
+  z-index: 5;
+`;
+
 export const SocialItem = styled.div `
   width: 150px;
   height: 150px;
@@ -156,7 +160,7 @@ export const SocialItem = styled.div `
   @media screen and (max-width: 1000px) {
     margin-bottom: 50px;
   }
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 450px) {
     width: 125px;
     height: 125px;
   }

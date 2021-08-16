@@ -11,7 +11,7 @@ import {
     SocialContainer,
     SocialImage,
     SocialItem,
-    SocialIconContainer
+    SocialIconContainer, SocialLink
 } from "./style";
 
 import telegram from '../../assets/icons/telegram2.svg';
@@ -24,27 +24,33 @@ import {Loading, NumberInput} from "../PopupForm/style";
 const socialItems = [
     {
         id: 1,
-        img: telegram
+        img: telegram,
+        link: 'http://t.me/videolessonuz'
     },
     {
         id: 2,
-        img: instagram
+        img: instagram,
+        link: 'https://instagram.com/videolesson.uz?utm_medium=copy_link',
     },
     {
         id: 3,
-        img: facebook
+        img: facebook,
+        link: 'https://www.facebook.com/Videolessonuz-professional-video-kurslar-105550465165296/'
     },
     {
         id: 4,
-        img: tiktok
+        img: tiktok,
+        link: 'https://vm.tiktok.com/ZSJn6PcCb/'
     }
 ]
 
 const FormSection = () => {
     const [submit, setSubmit] = useState({loading: false, error: false, success: false})
+
+    const [number, setNumber] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        // const form = {
+
         setSubmit({loading: true, error: false, success: false})
         const name = e.target.name.value;
         const phone = e.target.phone.value;
@@ -59,12 +65,14 @@ const FormSection = () => {
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})
                 e.target.reset();
+                setNumber('')
             })
             .catch((err) => {
                 setSubmit({loading: false, error: true, success: false})
             })
             .finally(()=> {
-                setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
+                setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000);
+
             })
     }
 
@@ -77,7 +85,7 @@ const FormSection = () => {
                         Buyurtma berish uchun quyidagi formani to'ldiring!
                     </FormHeading>
                     <NameInput required name={"name"} placeholder="Ismingiz" maxLength="15" minLength={"3"}/>
-                    <NumberInput format="+998 (##) ###-##-##"
+                    <NumberInput value={number} onChange={(e) => setNumber(e.target.value)} format="+998 (##) ###-##-##"
                                  mask="_" required name={"phone"} placeholder="Telefon raqmingiz"/>
                     <NameInput maxLength="30" minLength={"3"} required name={"course"} placeholder="Kurs nomini kiriting"/>
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
@@ -92,9 +100,11 @@ const FormSection = () => {
                 </SocialHeading>
                 <SocialIconContainer>
                     {socialItems.map(item =>
-                        <SocialItem key={item.id}>
-                            <SocialImage src={item.img}/>
-                        </SocialItem>
+                        <SocialLink target="_blank" href={item.link}>
+                            <SocialItem key={item.id}>
+                                <SocialImage src={item.img}/>
+                            </SocialItem>
+                        </SocialLink>
                     )}
                 </SocialIconContainer>
             </SocialContainer>

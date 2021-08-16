@@ -98,7 +98,7 @@ export const NumberInput = styled(NumberFormat) `
   margin-bottom: 25px;
   padding: 10px;
   font-size: 20px;
-
+  font-family: sans-serif;
   &::placeholder {
     font-size: 20px;
     color: #a6a6a6;

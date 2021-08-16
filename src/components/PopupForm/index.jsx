@@ -15,7 +15,9 @@ import {useState} from "react";
 const closeIcon = 'https://firebasestorage.googleapis.com/v0/b/space-21-72f2b.appspot.com/o/images%2Fclose.svg?alt=media&token=971022d0-16a5-44d1-9d73-597fed64a654'
 
 const PopupForm = ({isOpen, callback}) => {
-    const [submit, setSubmit] = useState({loading: false, error: false, success: false})
+    const [submit, setSubmit] = useState({loading: false, error: false, success: false});
+    const [number, setNumber] = useState('')
+
     const handleSubmit = (e) => {
         e.preventDefault();
         // const form = {
@@ -33,6 +35,7 @@ const PopupForm = ({isOpen, callback}) => {
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})
                 e.target.reset();
+                setNumber('')
             })
             .catch((err) => {
                 setSubmit({loading: false, error: true, success: false})
@@ -53,7 +56,7 @@ const PopupForm = ({isOpen, callback}) => {
                         Buyurtma berish uchun quyidagi formani to'ldiring!
                     </FormHeading>
                     <NameInput required name={"name"} placeholder="Ismingiz" maxLength="15" minLength={"3"}/>
-                    <NumberInput format="+998 (##) ###-##-##"
+                    <NumberInput value={number} onChange={(e) => setNumber(e.target.value)} format="+998 (##) ###-##-##"
                                  mask="_" required name={"phone"} placeholder="Telefon raqmingiz"/>
                     <NameInput maxLength="30" minLength={"3"} required name={"course"} placeholder="Kurs nomini kiriting"/>
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>

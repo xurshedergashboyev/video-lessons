@@ -17,12 +17,13 @@ import phoneLine from '../../assets/icons/phone-line.svg';
 
 const contactDetails = [
     {
-        name: 'Toshkent shahar Chilonzor tumani 45-uy',
-        img: mapLine
+        name: 'Olmazor tuman, Langar ko\'chasi 76-uy',
+        img: mapLine,
     },
     {
         name: '55 500 01 09',
-        img: phoneLine
+        img: phoneLine,
+        href: 'tel: +998555000109'
     },
     {
         name: '9:00 - 18:00 gacha',
@@ -39,7 +40,7 @@ const Footer = () => {
                         {contactDetails.map((contact, i) =>
                             <ContactItem key={i}>
                                 <ContactIcon src={contact.img}/>
-                                <ContactInfo>
+                                <ContactInfo href={contact?.href}>
                                     {contact.name}
                                 </ContactInfo>
                             </ContactItem>
@@ -47,8 +48,8 @@ const Footer = () => {
                     </ContactContainer>
                     <MapContainer>
                         <Map
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d384844.62600144383!2d70.05020415!3d41.09961525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1628945645405!5m2!1sru!2s"
-                            style={{border: 0}}/>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187.2567612967905!2d69.227178266779!3d41.328260909637486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8f77b4c033%3A0xbee79721eacbdef9!2zNzYg0JvRj9C90LPQsNGAINC60Z7Rh9Cw0YHQuCwg0KLQvtGI0LrQtdC90YIsIFV6YmVraXN0YW4!5e0!3m2!1sen!2s!4v1629098223855!5m2!1sen!2s"
+                            width="600" height="450" style={{border: 0}} allowFullScreen=""/>
                     </MapContainer>
                 </Container>
             </Wrapper>

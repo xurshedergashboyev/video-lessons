@@ -41,10 +41,11 @@ export const ContactIcon = styled.img`
   }
 `;
 
-export const ContactInfo = styled.p`
+export const ContactInfo = styled.a`
   font-size: 25px;
   color: #fff;
   width: 100%;
+  text-decoration: none;
   @media screen and (max-width: 750px) {
     font-size: 20px;
   }

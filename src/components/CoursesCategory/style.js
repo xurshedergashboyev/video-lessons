@@ -55,32 +55,32 @@ export const MoreCourses = styled.img `
 export const FlexCourses = styled.div `
   display: flex;
   width: 80%;
-  height: ${props => props.opacity ? "400px" : "0"};
+  height: ${props => props.opacity ? (props.width > 2 ? '350px' : '350px') : "0"};
   transition: .3s ease-in-out;
   overflow: hidden;
   @media screen and (max-width: 1200px) {
-    height: ${props => props.opacity ? "300px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '300px' : '350px') : "0px"};
   }
   @media screen and (max-width: 900px) {
-    height: ${props => props.opacity ? "200px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '250px' : '350px'): "0px"};
   }
   @media screen and (max-width: 800px) {
-    height: ${props => props.opacity ? "850px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '700px' : '350px') : "0px"};
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
   }
   @media screen and (max-width: 700px) {
-    height: ${props => props.opacity ? "750px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '750px' : '350px'): "0px"};
   }
   @media screen and (max-width: 600px) {
-    height: ${props => props.opacity ? "650px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '650px' : '300px') : "0px"};
   }
   @media screen and (max-width: 450px) {
-    height: ${props => props.opacity ? "500px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '400px' : '200px') : "0px"};
   }
   @media screen and (max-width: 400px) {
-    height: ${props => props.opacity ? "400px" : "0px"};
+    height: ${props => props.opacity ? (props.width > 2 ? '350px' : '150px') : "0px"};
   }
 `;
 
