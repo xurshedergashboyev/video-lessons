@@ -85,6 +85,13 @@ export const Copywriting = styled.div `
   }
 `;
 
+export const Link = styled.a `
+  color: #fff;
+  text-decoration: none;
+  margin-right: 5px;
+  margin-left: 5px;
+`;
+
 export const Heart = styled.img `
   width: 25px;
   height: 25px;

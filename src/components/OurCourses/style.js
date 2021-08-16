@@ -38,6 +38,7 @@ export const Heading = styled.h2 `
   @media screen and (max-width: 800px) {
     font-size: 13vw;
     text-align: center;
+    margin-top: 50px;
   }
 `;
 

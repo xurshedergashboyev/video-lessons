@@ -29,6 +29,10 @@ export const NavbarLogo = styled.div `
   cursor: pointer;
 `;
 
+export const NavbarAnchor = styled.div `
+  
+`;
+
 export const NavbarLogoImg = styled.img `
   width: 100%;
   height: 100%;

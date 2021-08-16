@@ -6,21 +6,23 @@ import {
     Heading,
 } from "./style";
 // images && icons
-import courseImage from '../../assets/images/Layer 10 copy 2.png'
+import threedMax from '../../assets/images/layers/3d max.png';
+import word from '../../assets/images/layers/Word.png';
+import photoshop from '../../assets/images/layers/Photoshop.png'
 
 
 const data = [
     {
         id: 1,
-        img: courseImage
+        img: threedMax
     },
     {
         id: 2,
-        img: courseImage
+        img: word
     },
     {
         id: 3,
-        img: courseImage
+        img: photoshop
     },
 ]
 

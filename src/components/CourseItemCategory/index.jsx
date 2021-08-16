@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {Course, FlexCourse, FlexCourseImage, FlexCourses, MoreCourses} from "../CoursesCategory/style";
 import showMore from "../../assets/icons/arrow-right-circle-line.svg";
 import courseImage from "../../assets/images/Layer 10 copy 2.png";
@@ -24,16 +25,21 @@ const data = [
 
 
 const CourseItemCategory = (props) => {
+    const [seeMore, setSeeMore] = useState(false);
+
+    const showMoreClick = () => {
+        setSeeMore(!seeMore);
+    }
     return (
         <Container>
             <Course onClick={() => {
-                // showMoreClick();
+                showMoreClick();
                 props.setOpen(props.index)
             }}>
                 {props.name}
-                <MoreCourses rotate={props.open === props.index} src={showMore}/>
+                <MoreCourses rotate={props.open === props.index && seeMore} src={showMore}/>
             </Course>
-            <FlexCourses opacity={props.open === props.index}>
+            <FlexCourses opacity={props.open === props.index && seeMore}>
                 {data.map(course =>
                     <FlexCourse key={course.id}>
                         <FlexCourseImage src={course.img}/>

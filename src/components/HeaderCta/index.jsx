@@ -55,7 +55,7 @@ const HeaderCta = () => {
                     <RightContainer>
                         <NavbarPhoneButton>
                             <NavbarPhoneIcon src={phoneIcon}/>
-                            <NavbarPhoneNumber href="tel: +9989555000109">
+                            <NavbarPhoneNumber href="tel: +998555000109">
                                 55 500 01 09
                             </NavbarPhoneNumber>
                         </NavbarPhoneButton>

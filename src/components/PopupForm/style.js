@@ -1,11 +1,23 @@
 import styled from 'styled-components'
+import NumberFormat from "react-number-format";
 
-export const Wrapper = styled.div `
+import {keyframes} from "styled-components";
+
+const Animation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Wrapper = styled.div`
   display: ${props => props.isOpen ? 'flex' : 'none'};
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
-   justify-content: center;
+  justify-content: center;
   align-items: center;
   z-index: 10;
   position: fixed;
@@ -14,7 +26,7 @@ export const Wrapper = styled.div `
 `;
 
 
-export const FormContainer = styled.div `
+export const FormContainer = styled.div`
   width: 450px;
   height: fit-content;
   //z-index: 5;
@@ -37,8 +49,8 @@ export const Form = styled.form`
   }
 `;
 
-export const Circle = styled.div `
-  width: 150px;  
+export const Circle = styled.div`
+  width: 150px;
   height: 150px;
   border-radius: 50%;
   background-color: #92c9e5;
@@ -76,7 +88,24 @@ export const NameInput = styled.input`
   }
 `;
 
-export const SubmitButton = styled.button `
+export const NumberInput = styled(NumberFormat) `
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  margin-bottom: 25px;
+  padding: 10px;
+  font-size: 20px;
+
+  &::placeholder {
+    font-size: 20px;
+    color: #a6a6a6;
+  }
+`;
+
+export const SubmitButton = styled.button`
   width: 100%;
   height: 50px;
   border-radius: 8px;
@@ -89,6 +118,9 @@ export const SubmitButton = styled.button `
   padding: 10px;
   font-size: 25px;
   box-shadow: 0 31px 41px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 550px) {
     font-size: 25px;
     text-align: center;
@@ -108,8 +140,18 @@ export const CloseIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
   .close-icon {
     width: 75%;
     height: 75%;
   }
+`;
+
+export const Loading = styled.div`
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  animation: ${Animation} 3s infinite linear;
+  border-radius: 50%;
 `;

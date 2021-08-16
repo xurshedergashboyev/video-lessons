@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {
     Circle,
     Container,
@@ -17,6 +18,8 @@ import telegram from '../../assets/icons/telegram2.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import tiktok from '../../assets/icons/tik-tok.svg'
+import axios from "axios";
+import {Loading, NumberInput} from "../PopupForm/style";
 
 const socialItems = [
     {
@@ -38,19 +41,48 @@ const socialItems = [
 ]
 
 const FormSection = () => {
+    const [submit, setSubmit] = useState({loading: false, error: false, success: false})
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // const form = {
+        setSubmit({loading: true, error: false, success: false})
+        const name = e.target.name.value;
+        const phone = e.target.phone.value;
+        const course = e.target.course.value;
+
+        const form = {
+            chat_id: '513214213',
+            text: `${name} \n ${phone} \n ${course} `
+        }
+
+        axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
+            .then((res) => {
+                setSubmit({loading: false, error: false, success: true})
+                e.target.reset();
+            })
+            .catch((err) => {
+                setSubmit({loading: false, error: true, success: false})
+            })
+            .finally(()=> {
+                setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
+            })
+    }
+
     return (
         <Container id="form">
             <FormContainer>
                 <Circle/>
-                <Form>
+                <Form onSubmit={handleSubmit}>
                     <FormHeading>
                         Buyurtma berish uchun quyidagi formani to'ldiring!
                     </FormHeading>
-                    <NameInput placeholder="Ismingiz"/>
-                    <NameInput placeholder="Telefon raqmingiz"/>
-                    <NameInput placeholder="Kurs nomini kiriting"/>
-                    <SubmitButton>
-                        Ro'yhatdan o'tish
+                    <NameInput required name={"name"} placeholder="Ismingiz" maxLength="15" minLength={"3"}/>
+                    <NumberInput format="+998 (##) ###-##-##"
+                                 mask="_" required name={"phone"} placeholder="Telefon raqmingiz"/>
+                    <NameInput maxLength="30" minLength={"3"} required name={"course"} placeholder="Kurs nomini kiriting"/>
+                    <SubmitButton disabled={submit.loading || submit.success || submit.error}>
+                        {submit.loading ?
+                            <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yhatdan o'tish"}
                     </SubmitButton>
                 </Form>
             </FormContainer>

@@ -89,6 +89,9 @@ export const SubmitButton = styled.button `
   padding: 10px;
   font-size: 25px;
   box-shadow: 0 31px 41px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (max-width: 550px) {
     font-size: 25px;
     text-align: center;

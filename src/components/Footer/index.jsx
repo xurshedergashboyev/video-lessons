@@ -8,7 +8,7 @@ import {
     Map,
     MapContainer,
     Copywriting,
-    Heart
+    Heart, Link
 } from "./style";
 
 import historyLine from '../../assets/icons/history-line.svg';
@@ -55,7 +55,9 @@ const Footer = () => {
             <Copywriting>
                 Made with <Heart
                 src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/red-heart_2764-fe0f.png"/> by
-                Space21
+                <Link href="https://space21.io/">
+                    Space21
+                </Link>
             </Copywriting>
         </div>
     )

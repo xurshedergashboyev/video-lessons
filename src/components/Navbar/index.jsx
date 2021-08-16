@@ -3,7 +3,7 @@ import {
     NavbarItems,
     NavbarLogo,
     NavbarLogoImg,
-    NavbarItem, NavbarImg,
+    NavbarItem, NavbarImg, NavbarAnchor,
 } from "./style";
 import logo from '../../assets/images/logo.png';
 import {useState} from "react";
@@ -39,7 +39,9 @@ const Navbar = () => {
         <NavbarContainer>
             <NavbarItems>
                 <NavbarLogo>
-                    <NavbarLogoImg alt="logo" src={logo}/>
+                    <NavbarAnchor href="/">
+                        <NavbarLogoImg alt="logo" src={logo}/>
+                    </NavbarAnchor>
                 </NavbarLogo>
                 {navbarData.map(item =>
                     <NavbarItem href={item.href} key={item.id}>
