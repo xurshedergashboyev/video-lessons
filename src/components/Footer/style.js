@@ -12,6 +12,9 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-around;
+  @media screen and (max-width: 800px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const ContactContainer = styled.div`
@@ -23,7 +26,7 @@ export const ContactContainer = styled.div`
 
 export const ContactItem = styled.div`
   display: flex;
-  height: 100px;
+  height: 75px;
   width: 100%;
   align-items: center;
 `;
@@ -32,12 +35,19 @@ export const ContactIcon = styled.img`
   height: 75%;
   width: auto;
   margin-right: 10px;
+  @media screen and (max-width: 800px) {
+    height: 50%;
+    width: auto;
+  }
 `;
 
 export const ContactInfo = styled.p`
   font-size: 25px;
   color: #fff;
   width: 100%;
+  @media screen and (max-width: 750px) {
+    font-size: 20px;
+  }
 `;
 
 export const MapContainer = styled.div `
@@ -47,6 +57,11 @@ export const MapContainer = styled.div `
   width: 650px;
   height: 400px;
   border-radius: 12px;
+  @media screen and (max-width: 750px) {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+  }
 `;
 
 export const Map = styled.iframe`
@@ -65,6 +80,9 @@ export const Copywriting = styled.div `
   justify-content: center;
   align-items: center;
   color: #fff;
+  @media screen and (max-width: 750px) {
+    font-size: 15px;
+  }
 `;
 
 export const Heart = styled.img `

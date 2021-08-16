@@ -3,9 +3,12 @@ import {
     NavbarItems,
     NavbarLogo,
     NavbarLogoImg,
-    NavbarItem,
+    NavbarItem, NavbarImg,
 } from "./style";
 import logo from '../../assets/images/logo.png';
+import {useState} from "react";
+import HoverText from "../Sidebar";
+import menuIcon from '../../assets/icons/menu.svg'
 
 const navbarData = [
     {
@@ -25,7 +28,13 @@ const navbarData = [
     }
 ];
 
+
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => {
+        setOpen(!open)
+    }
     return (
         <NavbarContainer>
             <NavbarItems>
@@ -37,7 +46,9 @@ const Navbar = () => {
                         {item.name}
                     </NavbarItem>
                 )}
+                <HoverText callback={() => setOpen(!open)} isOpen={open} setIsOpen={setOpen}/>
             </NavbarItems>
+            <NavbarImg src={menuIcon} onClick={handleOpen}/>
         </NavbarContainer>
     )
 }

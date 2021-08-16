@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
+export const Relative = styled.div `
+  position: relative;
+`;
 
 export const Wrapper = styled.div `
   width: 100%;
@@ -34,7 +37,7 @@ export const LeftContainerHeading = styled.h2 `
   width: 100%;
   margin-bottom: 50px;
   @media screen and (max-width: 800px) {
-    font-size: 60px;
+    font-size: 10vw;
     text-align: center;
   }
 `;
@@ -48,7 +51,7 @@ export const CtaButtonContainer = styled.div`
   margin-top: 50px;
   margin-bottom: 100px;
   @media screen and (max-width: 800px) {
-    margin: 0 50px 100px 50px;
+    margin: 0 50px 0 50px;
   }
 `;
 

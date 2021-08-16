@@ -60,7 +60,7 @@ export const Heading = styled.div`
   margin-top: 50px;
   z-index: 5;
   @media screen and (max-width: 800px) {
-    margin-bottom: 50px;
+    margin-bottom: 0;
   }
 `;
 

@@ -4,20 +4,22 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.div `
   width: 80%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: transparent;
   margin-top: 30px;
   margin-left: 100px;
   @media screen and (max-width: 800px) {
     margin-left: 50px;
+    width: 100%;
   }
 `;
 
 export const NavbarItems = styled.div `
   display: flex;
   align-items: center;
-  space
+  @media screen and (max-width: 800px) {
+    justify-content: space-between;
+  }
 `;
 
 export const NavbarLogo = styled.div `
@@ -63,5 +65,20 @@ export const NavbarItem = styled.a `
     height: 2px;
     transition: all .5s ease-in-out;
   }
+  
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
+export const NavbarImg = styled.img `
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 50px;
+  }
+`;

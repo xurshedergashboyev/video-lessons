@@ -6,6 +6,7 @@ export const CoursesList = styled.div `
   margin-left: 150px;
   @media screen and (max-width: 800px) {
     margin: 0 50px;
+    align-items: center;
   }
 `;
 
@@ -13,6 +14,9 @@ export const CoursesListHeading = styled.h2 `
   font-size: 50px;
   margin-bottom: 50px;
   color: #2a2850;
+  @media screen and (max-width: 500px) {
+    font-size: 40px;
+  }
 `;
 
 export const Course = styled.div `
@@ -29,6 +33,12 @@ export const Course = styled.div `
   justify-content: space-between;
   cursor: pointer;
   transition: .45s cubic-bezier(.44, .99, .48, 1);
+  z-index: 5;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 75px;
+    font-size: 25px;
+  }
 `;
 
 export const MoreCourses = styled.img `
@@ -36,23 +46,74 @@ export const MoreCourses = styled.img `
   height: 50px;
   transform: ${props => props.rotate ? 'rotate(-90deg)' : 'rotate(90deg)'};
   transition: transform .45s cubic-bezier(.44, .99, .48, 1);
+  @media screen and (max-width: 500px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 export const FlexCourses = styled.div `
   display: flex;
   width: 80%;
-  height: ${props => props.opacity ? "400px" : "0px"};
+  height: ${props => props.opacity ? "400px" : "0"};
   transition: .3s ease-in-out;
+  overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    height: ${props => props.opacity ? "300px" : "0px"};
+  }
+  @media screen and (max-width: 900px) {
+    height: ${props => props.opacity ? "200px" : "0px"};
+  }
+  @media screen and (max-width: 800px) {
+    height: ${props => props.opacity ? "850px" : "0px"};
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (max-width: 700px) {
+    height: ${props => props.opacity ? "750px" : "0px"};
+  }
+  @media screen and (max-width: 600px) {
+    height: ${props => props.opacity ? "650px" : "0px"};
+  }
+  @media screen and (max-width: 450px) {
+    height: ${props => props.opacity ? "500px" : "0px"};
+  }
+  @media screen and (max-width: 400px) {
+    height: ${props => props.opacity ? "400px" : "0px"};
+  }
 `;
 
 export const FlexCourse = styled.div `
   width: 200px;
   height: auto;
-  margin-right: 150px;
-  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  @media screen and (max-width: 900px) {
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 30%;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 35%;
+  }
+  @media screen and (max-width: 440px) {
+    width: 30%;
+  }
 `;
 
 export const FlexCourseImage = styled.img `
   width: 100%;
-  height: 100%;
+  height: auto;
+`;
+
+export const Ellipse = styled.img `
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 30%;
+  right: 30%;
 `;

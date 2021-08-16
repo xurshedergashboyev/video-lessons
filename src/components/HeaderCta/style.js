@@ -53,6 +53,9 @@ export const CtaContainer = styled.div`
   @media screen and (max-width: 800px) {
     margin: 15vw 50px 50px 50px;
   }
+  @media screen and (max-width: 550px) {
+    margin: 25vw 50px 50px 50px;
+  }
 `;
 
 export const CtaHeader = styled.h1`
@@ -219,7 +222,8 @@ export const NavbarPhoneIcon = styled.img`
   margin-right: 10px;
 `;
 
-export const NavbarPhoneNumber = styled.p`
+export const NavbarPhoneNumber = styled.a`
   font-size: 20px;
   color: #fff;
+  text-decoration: none;
 `;

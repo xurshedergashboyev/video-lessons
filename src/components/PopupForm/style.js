@@ -1,24 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  margin-top: 100px;
-  margin-left: 150px;
-  @media screen and (max-width: 800px) {
-    margin: 100px 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+export const Wrapper = styled.div `
+  display: ${props => props.isOpen ? 'flex' : 'none'};
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+   justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
 `;
+
 
 export const FormContainer = styled.div `
   width: 450px;
   height: fit-content;
   //z-index: 5;
   position: relative;
-  margin-bottom: 100px;
   @media screen and (max-width: 550px) {
     width: 75%;
   }
@@ -95,71 +95,21 @@ export const SubmitButton = styled.button `
   }
 `;
 
-export const SocialContainer = styled.div `
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: 800px) {
-    align-items: center;
-  }
-`;
-
-export const SocialHeading = styled.h3 `
-  width: 40%;
-  font-size: 50px;
-  line-height: 1;
-  color: #2c2a51;
-  margin-bottom: 50px;
-  @media screen and (max-width: 800px) {
-    font-size: 7vw;
-    width: 75%;
-  }
-  @media screen and (max-width: 550px) {
-    font-size: 8vw;
-    text-align: center;
-  }
-`;
-
-export const SocialIconContainer = styled.div `
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-  @media screen and (max-width: 1000px) {
-    flex-wrap: wrap;
-    width: 40%;
-  }
-  @media screen and (max-width: 800px) {
-    flex-wrap: wrap;
-    width: 60%;
-    margin-bottom: 0;
-  }
-  @media screen and (max-width: 575px) {
-    flex-wrap: wrap;
-    width: 80%;
-  }
-`;
-
-export const SocialItem = styled.div `
-  width: 150px;
-  height: 150px;
-  border-radius: 12px;
-  background-color: #8dc3de;
+export const CloseIcon = styled.div`
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  padding: 10px;
+  background-color: #fb9591;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
-  @media screen and (max-width: 1000px) {
-    margin-bottom: 50px;
+  .close-icon {
+    width: 75%;
+    height: 75%;
   }
-  @media screen and (max-width: 575px) {
-    width: 125px;
-    height: 125px;
-  }
-`;
-
-export const SocialImage = styled.img `
-  width: 70%;
-  height: 70%;
 `;

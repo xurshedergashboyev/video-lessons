@@ -6,6 +6,11 @@ export const Wrapper = styled.div `
   position: relative;
   margin-top: 0;
   margin-right: 0;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 

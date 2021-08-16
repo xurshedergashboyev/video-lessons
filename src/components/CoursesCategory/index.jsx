@@ -1,11 +1,11 @@
 import {useState} from "react";
 import {
     CoursesList,
-    CoursesListHeading,
+    CoursesListHeading, Ellipse,
 } from "./style";
 // images && icons
 import CourseItemCategory from "../CourseItemCategory";
-
+import ellipse from '../../assets/images/elipse.png'
 
 const courses = [
     {
@@ -34,7 +34,6 @@ const courses = [
 const CoursesCategory = () => {
     const [opened, setOpened] = useState(null);
 
-
     return (
         <CoursesList>
             <CoursesListHeading>
@@ -43,16 +42,7 @@ const CoursesCategory = () => {
             {courses.map((item, index) =>
                 <CourseItemCategory open={opened} setOpen={setOpened} name={item.name} key={item.id} index={index}/>
             )}
-            {/*{seeMore ?*/}
-            {/*    <FlexCourses>*/}
-            {/*        {data.map(course =>*/}
-            {/*            <FlexCourse key={course.id}>*/}
-            {/*                <FlexCourseImage src={course.img}/>*/}
-            {/*            </FlexCourse>*/}
-            {/*        )}*/}
-            {/*    </FlexCourses>*/}
-            {/*    : null*/}
-            {/*}*/}
+            <Ellipse src={ellipse} alt="ellipse"/>
         </CoursesList>
     )
 }
