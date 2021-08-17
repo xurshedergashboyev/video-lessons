@@ -1,7 +1,7 @@
 import {useState} from "react";
-import {Course, FlexCourse, FlexCourseImage, FlexCourses, MoreCourses} from "../CoursesCategory/style";
+import {Course, FlexCourse, FlexCourseImage, FlexCourseName, FlexCourses, MoreCourses} from "../CoursesCategory/style";
 import showMore from "../../assets/icons/arrow-right-circle-line.svg";
-import {Container} from "./style";
+import {Container, Attr} from "./style";
 
 const CourseItemCategory = (props) => {
     const [seeMore, setSeeMore] = useState(false);
@@ -9,6 +9,8 @@ const CourseItemCategory = (props) => {
     const showMoreClick = () => {
         setSeeMore(!seeMore);
     }
+
+
 
     return (
         <Container>
@@ -23,10 +25,14 @@ const CourseItemCategory = (props) => {
             {/*eslint-disable-next-line no-use-before-define*/}
             <FlexCourses width={props.img.length} opacity={props.open === props.index && seeMore}>
                 {props.img.map((img, index) =>
-                    <FlexCourse key={index}>
-                        <FlexCourseImage src={img} alt="course-item"/>
-                    </FlexCourse>
-                )}
+                    <Attr href="#form">
+                        <FlexCourse key={index}>
+                            <FlexCourseImage src={img.img} alt="course-item"/>
+                            {/*<FlexCourseName>{}</FlexCourseName>*/}
+                        </FlexCourse>
+                        <FlexCourseName>{img.name}</FlexCourseName>
+                    </Attr>
+                ) }
                 {/*)}*/}
             </FlexCourses>
         </Container>

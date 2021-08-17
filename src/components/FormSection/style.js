@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Select from 'react-select'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 90%;
   height: 100%;
   margin-top: 100px;
   margin-left: 150px;

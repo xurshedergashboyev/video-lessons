@@ -14,15 +14,18 @@ import photoshop from '../../assets/images/layers/Photoshop.png'
 const data = [
     {
         id: 1,
-        img: threedMax
+        img: threedMax,
+        name: '3d Max'
     },
     {
         id: 2,
-        img: word
+        img: word,
+        name: 'Office Word'
     },
     {
         id: 3,
-        img: photoshop
+        img: photoshop,
+        name: 'Adobe Photoshop'
     },
 ]
 

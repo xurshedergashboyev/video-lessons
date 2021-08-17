@@ -7,3 +7,12 @@ export const Container = styled.div `
     align-items: center;
   }
 `;
+
+
+export const Attr = styled.a `
+  text-decoration: none;
+  cursor: pointer;
+  @media screen and (max-width: 600px) {
+    width: 35%;
+  }
+`;

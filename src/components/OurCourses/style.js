@@ -59,6 +59,10 @@ export const FlexCourse = styled.div `
   margin-bottom: 100px;
   z-index: 5;
   position: relative;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    margin-right: 50px;
+  }
   @media screen and (max-width: 900px) {
     margin-bottom: 50px;
   }
@@ -92,5 +96,8 @@ export const FlexCircle = styled.div `
   @media screen and (max-width: 900px) {
     width: 7vw;
     height: 7vw;
+  }
+  @media screen and (max-width: 600px) {
+    right: -5%;
   }
 `;

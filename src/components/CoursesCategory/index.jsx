@@ -24,51 +24,51 @@ const courses = [
     {
         id: 1,
         name: 'Office dasturlari',
-        img:
+        imgDetails:
             [
-                word,
-                excel,
-                powerPoint
+                {img: word, name: 'Office Word'},
+                {img: excel, name: 'Office Excel'},
+                {img: powerPoint, name: 'Office PowerPoint'}
             ],
     },
     {
         id: 2,
         name: 'Grafik Dizayn',
-        img:
+        imgDetails:
             [
-                photoshop,
-                corelDraw
+                {img: photoshop, name: 'Adobe Photoshop'},
+                {img: corelDraw, name: 'CorelDraw'}
             ],
 
     },
     {
         id: 3,
         name: 'IT kurslari',
-        img:
+        imgDetails:
             [
-                telegram,
-                html,
-                php,
-                tgBot,
-                bem
+                {img: telegram, name: 'Telegram Business'},
+                {img: html, name: 'HTML & CSS'},
+                {img: php, name: 'PHP'},
+                {img: tgBot, name: 'Telegram Bot'},
+                {img: bem, name: 'BEM Metodi'}
             ]
     },
     {
         id: 4,
         name: 'Buxgalteriya',
-        img:
+        imgDetails:
             [
-                oneC,
-                excel
+                {img: oneC, name: '1c'},
+                {img: excel, name: 'Office Excel'}
             ],
 
     },
     {
         id: 5,
         name: '3d kurslari',
-        img:
+        imgDetails:
             [
-                threeDMax,
+                {img: threeDMax, name: '3d Max'},
             ],
 
     }
@@ -84,7 +84,7 @@ const CoursesCategory = () => {
                 Kurslar ro'yxati
             </CoursesListHeading>
             {courses.map((item, index) =>
-                <CourseItemCategory img={item.img} open={opened} setOpen={setOpened} name={item.name}
+                <CourseItemCategory img={item.imgDetails} open={opened} setOpen={setOpened} name={item.name}
                                     key={item.id} index={index}/>
             )}
             <Ellipse src={ellipse} alt="ellipse"/>
