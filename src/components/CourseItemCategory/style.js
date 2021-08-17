@@ -9,7 +9,7 @@ export const Container = styled.div `
 `;
 
 
-export const Attr = styled.a `
+export const Attr = styled.div `
   text-decoration: none;
   cursor: pointer;
   @media screen and (max-width: 600px) {

@@ -60,7 +60,7 @@ const data = [
         id: 6,
         img: certificate,
         name: 'Maxsus sertifikat',
-        desc: 'Video kursimizni to‘liq o‘z tugatganingizdan so‘ng maxsus sertifikat beriladi.',
+        desc: 'Video kursimizni to‘liq tugatganingizdan so‘ng maxsus sertifikat beriladi.',
         bgColor: '#97d0ee'
     }
 ]

@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
   z-index: 10;
   position: fixed;
   top: 0;
+  left: 0;
   backdrop-filter: blur(5px);
 `;
 

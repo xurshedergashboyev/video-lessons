@@ -117,7 +117,7 @@ const FormSection = () => {
                         mask="_"
                         required
                         name={"phone"}
-                        placeholder="Telefon raqmingiz"
+                        placeholder="Telefon raqamingiz"
                     />
                     {/*<NameInput*/}
                     {/*    maxLength="30"*/}
@@ -130,6 +130,7 @@ const FormSection = () => {
                         options={options}
                         // onChange={(e)=>setSelected(e.value)}
                         maxMenuHeight={150}
+                        placeholder="Kursni tanlang..."
                         // className="select-option"
                         theme={(theme) => ({
                             ...theme,
@@ -146,7 +147,7 @@ const FormSection = () => {
                         />
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
                         {submit.loading ?
-                            <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yhatdan o'tish"}
+                            <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yxatdan o'tish"}
                     </SubmitButton>
                 </Form>
             </FormContainer>

@@ -45,7 +45,7 @@ const HeaderCta = () => {
                                 <BottomLittleCircle />
                                 <CtaButton>
                                     <Link href="#courses">
-                                        kurslar ro'yhati
+                                        kurslar ro'yxati
                                     </Link>
                                     <Icon className="icon" src={rightArrow} />
                                 </CtaButton>

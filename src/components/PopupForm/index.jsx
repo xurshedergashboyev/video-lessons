@@ -15,7 +15,7 @@ import {SelectOption} from "../FormSection/style";
 // import {Wrapper} from "./style";
 const closeIcon = 'https://firebasestorage.googleapis.com/v0/b/space-21-72f2b.appspot.com/o/images%2Fclose.svg?alt=media&token=971022d0-16a5-44d1-9d73-597fed64a654'
 
-const PopupForm = ({isOpen, callback}) => {
+const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
 
     const options = [
         { value: 'Office Word', label: 'Office Word'},
@@ -39,9 +39,9 @@ const PopupForm = ({isOpen, callback}) => {
         e.preventDefault();
         // const form = {
         setSubmit({loading: true, error: false, success: false})
-        const name = e.target.name.value;
-        const phone = e.target.phone.value;
-        const course = e.target.select.value;
+        const name = e.target.name?.value;
+        const phone = e.target.phone?.value;
+        const course = e.target.select?.value;
 
         const form = {
             // original
@@ -65,12 +65,13 @@ const PopupForm = ({isOpen, callback}) => {
                 setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
             })
     }
+    console.log(selectedCourse)
 
     return (
         <Wrapper isOpen={isOpen}>
             <FormContainer>
                 <CloseIcon>
-                    <img alt={"close-icon"} src={closeIcon} onClick={callback} className="close-icon"/>
+                    <img alt={"close-icon"} src={closeIcon} onClick={callback|| closePopUp} className="close-icon"/>
                 </CloseIcon>
                 <Form onSubmit={handleSubmit}>
                     <FormHeading>
@@ -90,11 +91,13 @@ const PopupForm = ({isOpen, callback}) => {
                         mask="_"
                         required
                         name={"phone"}
-                        placeholder="Telefon raqmingiz"
+                        placeholder="Telefon raqamingiz"
                     />
                     <SelectOption
                         name={"select"}
                         options={options}
+                        value={selectedCourse}
+                        isDisabled={selectedCourse?.value}
                         // onChange={(e)=>setSelected(e.value)}
                         maxMenuHeight={150}
                         // className="select-option"
@@ -113,7 +116,7 @@ const PopupForm = ({isOpen, callback}) => {
                     />
                     <SubmitButton disabled={submit.loading || submit.success || submit.error}>
                         {submit.loading ?
-                            <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yhatdan o'tish"}
+                            <Loading/> : submit.success ? "Jo'natildi" : submit.error ? 'Xatolik!' : "Ro'yxatdan o'tish"}
                     </SubmitButton>
                 </Form>
             </FormContainer>
