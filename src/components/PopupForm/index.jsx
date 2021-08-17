@@ -45,12 +45,12 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
 
         const form = {
             // original
-            chat_id: '513214213',
+            // chat_id: '513214213',
             // test
-            // chat_id: '286602133',
+            chat_id: '286602133',
             text: `${name} \n ${phone} \n ${course} `
         }
-
+        console.log(form,course)
         axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})
@@ -65,13 +65,12 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
                 setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
             })
     }
-    console.log(selectedCourse)
 
     return (
         <Wrapper isOpen={isOpen}>
             <FormContainer>
                 <CloseIcon>
-                    <img alt={"close-icon"} src={closeIcon} onClick={callback|| closePopUp} className="close-icon"/>
+                    <img alt={"close-icon"} src={closeIcon} onClick={callback || closePopUp} className="close-icon"/>
                 </CloseIcon>
                 <Form onSubmit={handleSubmit}>
                     <FormHeading>
@@ -97,8 +96,6 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
                         name={"select"}
                         options={options}
                         value={selectedCourse}
-                        isDisabled={selectedCourse?.value}
-                        // onChange={(e)=>setSelected(e.value)}
                         maxMenuHeight={150}
                         // className="select-option"
                         theme={(theme) => ({
