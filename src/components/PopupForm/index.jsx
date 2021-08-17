@@ -45,9 +45,9 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
 
         const form = {
             // original
-            // chat_id: '513214213',
+            chat_id: '513214213',
             // test
-            chat_id: '286602133',
+            // chat_id: '286602133',
             text: `${name} \n ${phone} \n ${course} `
         }
         console.log(form,course)
