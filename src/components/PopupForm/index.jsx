@@ -49,7 +49,6 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
             // chat_id: '286602133', // test
             text: `${name} \n ${phone} \n ${course} `
         }
-        console.log(form,course)
         axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})

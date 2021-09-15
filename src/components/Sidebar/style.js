@@ -10,14 +10,12 @@ export const NavbarWrapper = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #618bef;
-  //opacity: .5;
   transition: .5s;
   z-index: 10000;
   padding: 30px;
   display: flex;
   justify-content: space-between;
   font-family: "Couture Bold", sans-serif;
-  //flex-direction: column;
 `;
 
 export const NavItems = styled.div`
@@ -79,9 +77,6 @@ export const NavbarPhoneButton = styled.button`
   margin-right: 75px;
   padding: 10px;
   border: none;
-  //position: absolute;
-  //top: 40px;
-  //right: 30px;
   cursor: pointer;
   border-radius: 12px;
   transition: .3s ease-in-out;
