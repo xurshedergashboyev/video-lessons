@@ -1,3 +1,7 @@
+import axios from "axios";
+import {useState} from "react";
+
+import {SelectOption} from "../FormSection/style";
 import {
     Wrapper,
     Form,
@@ -9,10 +13,7 @@ import {
     Loading,
     NumberInput
 } from "./style";
-import axios from "axios";
-import {useState} from "react";
-import {SelectOption} from "../FormSection/style";
-// import {Wrapper} from "./style";
+
 const closeIcon = 'https://firebasestorage.googleapis.com/v0/b/space-21-72f2b.appspot.com/o/images%2Fclose.svg?alt=media&token=971022d0-16a5-44d1-9d73-597fed64a654'
 
 const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
@@ -44,10 +45,8 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
         const course = e.target.select?.value;
 
         const form = {
-            // original
-            chat_id: '513214213',
-            // test
-            // chat_id: '286602133',
+            chat_id: '513214213', // original
+            // chat_id: '286602133', // test
             text: `${name} \n ${phone} \n ${course} `
         }
         console.log(form,course)

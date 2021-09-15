@@ -56,7 +56,6 @@ export const NavbarItem = styled.a `
   font-size: 2vw;
   color: #e1e1e1;
   cursor: pointer;
-  //transition: .5s ease-in-out;
   text-align: center;
   position: relative;
   transition: all .5s ease-in-out;

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import axios from "axios";
 import {
     Circle,
     Container,
@@ -14,19 +15,20 @@ import {
     SocialIconContainer,
     SocialLink, SelectOption,
 } from "./style";
+import {Loading, NumberInput} from "../PopupForm/style";
 
+// icons
 import telegram from '../../assets/icons/telegram2.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import tiktok from '../../assets/icons/tik-tok.svg'
-import axios from "axios";
-import {Loading, NumberInput} from "../PopupForm/style";
+
 
 const socialItems = [
     {
         id: 1,
         img: telegram,
-        link: 'http://t.me/videolessonuz'
+        link: 'https://t.me/videolessonuz'
     },
     {
         id: 2,
@@ -47,6 +49,7 @@ const socialItems = [
 
 const FormSection = () => {
     const [submit, setSubmit] = useState({loading: false, error: false, success: false})
+    const [number, setNumber] = useState('')
 
     const options = [
         { value: 'Office Word', label: 'Office Word'},
@@ -63,7 +66,6 @@ const FormSection = () => {
         { value: 'BEM Method', label: 'BEM Method'}
     ]
 
-    const [number, setNumber] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -73,25 +75,21 @@ const FormSection = () => {
         const course = e.target.select.value;
 
         const form = {
-            // original
-            chat_id: '513214213',
-            // test
-            // chat_id: '286602133',
+            chat_id: '513214213', // original
+            // chat_id: '286602133', // test
             text: `${name} \n ${phone} \n ${course} `
         }
-        console.log(form)
         axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
-            .then((res) => {
+            .then(() => {
                 setSubmit({loading: false, error: false, success: true})
                 e.target.reset();
                 setNumber('')
             })
-            .catch((err) => {
+            .catch(() => {
                 setSubmit({loading: false, error: true, success: false})
             })
             .finally(() => {
                 setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000);
-
             })
     }
 
@@ -119,19 +117,11 @@ const FormSection = () => {
                         name={"phone"}
                         placeholder="Telefon raqamingiz"
                     />
-                    {/*<NameInput*/}
-                    {/*    maxLength="30"*/}
-                    {/*    minLength={"3"}*/}
-                    {/*    required*/}
-                    {/*    name={"course"}*/}
-                    {/*    placeholder="Kurs nomini kiriting"/>*/}
                     <SelectOption
                         name={"select"}
                         options={options}
-                        // onChange={(e)=>setSelected(e.value)}
                         maxMenuHeight={150}
                         placeholder="Kursni tanlang..."
-                        // className="select-option"
                         theme={(theme) => ({
                             ...theme,
                             borderRadius: 8,

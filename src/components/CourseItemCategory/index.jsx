@@ -4,7 +4,7 @@ import showMore from "../../assets/icons/arrow-right-circle-line.svg";
 import {Container, Attr} from "./style";
 import PopupForm from "../PopupForm";
 
-const CourseItemCategory = (props) => {
+const CourseItemCategory = ({img, index, name, open, setOpen}) => {
     const [seeMore, setSeeMore] = useState(false);
     const [isOpen, setIsOpen] = useState(false)
     const [show, setShow] = useState({isOpen:false,selectedCourse: {}});
@@ -23,15 +23,15 @@ const CourseItemCategory = (props) => {
             <Container>
                 <Course onClick={() => {
                     showMoreClick();
-                    props.setOpen(props.index)
+                    setOpen(index)
                 }}>
-                    {props.name}
+                    {name}
                     {/*eslint-disable-next-line no-use-before-define*/}
-                    <MoreCourses rotate={props.open === props.index && seeMore} src={showMore}/>
+                    <MoreCourses rotate={open === index && seeMore} src={showMore}/>
                 </Course>
                 {/*eslint-disable-next-line no-use-before-define*/}
-                <FlexCourses width={props.img.length} opacity={props.open === props.index && seeMore}>
-                    {props.img.map((img, index) =>
+                <FlexCourses width={img.length} opacity={open === index && seeMore}>
+                    {img.map((img, index) =>
                         <Attr onClick={() => handleOpen(img.name)}>
                             <FlexCourse key={index}>
                                 <FlexCourseImage src={img.img} alt="course-item"/>
