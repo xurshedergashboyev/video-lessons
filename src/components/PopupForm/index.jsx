@@ -1,6 +1,9 @@
 import axios from "axios";
 import {useState} from "react";
 
+// chat_id
+import {mainChatId, secondaryChatId} from "../../contants/chatId";
+
 import {SelectOption} from "../FormSection/style";
 import {
     Wrapper,
@@ -44,12 +47,12 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
         const phone = e.target.phone?.value;
         const course = e.target.select?.value;
 
-        const form = {
-            chat_id: '513214213', // original
-            // chat_id: '286602133', // test
-            text: `${name} \n ${phone} \n ${course} `
-        }
-        axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", form)
+        const form = [
+            {chat_id: secondaryChatId, text: `${name} \n ${phone} \n ${course} `},
+            {chat_id: mainChatId, text: `${name} \n ${phone} \n ${course} `}
+        ]
+
+        form.forEach(value => axios.post("https://api.telegram.org/bot1986012381:AAErkrUmukqr5hytNa0x6TI1ix7-vl6Hnho/sendMessage", value)
             .then((res) => {
                 setSubmit({loading: false, error: false, success: true})
                 e.target.reset();
@@ -61,7 +64,7 @@ const PopupForm = ({isOpen, callback,closePopUp, selectedCourse}) => {
             })
             .finally(()=> {
                 setTimeout(() => setSubmit({loading: false, error: false, success: false}), 4000)
-            })
+            }))
     }
 
     return (
