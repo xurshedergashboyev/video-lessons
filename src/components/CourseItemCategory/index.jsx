@@ -43,8 +43,6 @@ const CourseItemCategory = ({img, index, name, open, setOpen}) => {
             </Container>
             <PopupForm selectedCourse={show.selectedCourse} closePopUp={()=>setShow({isOpen:false,selectedCourse:{}})} isOpen={show.isOpen}/>
         </>
-
-
     )
 }
 
